@@ -2,7 +2,8 @@
 
 1. Instalar dependencias: `npm install`
 2. Correr proyecto: `npm start`
-3. Correr servidor `JSON: json-server bd.json --port 4000`
+3. Instalar JSON server `npm install -g json-server`
+4. Correr servidor `JSON: json-server bd.json --port 4000`
 
 
 # Getting Started with Create React App
