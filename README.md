@@ -1,3 +1,10 @@
+# Para iniiciar el proyecto:
+
+1. Instalar dependencias: `npm install`
+2. Correr proyecto: `npm start`
+3. Correr servidor `JSON: json-server bd.json --port 4000`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
