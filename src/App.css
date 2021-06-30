@@ -1,0 +1,28 @@
+.card-body{
+  background-color:lightgray;
+}
+.logo-home{
+  max-width: 10rem;
+  margin: 1rem 0;
+}
+.select-coordinacion{
+  max-width: 30rem;
+  text-align: center;
+}
+.nav-item .active{
+  font-weight: bold
+}
+.nav-link{
+  color: black !important;
+}
+.nav-link.active{
+  color: white !important;
+}
+.table-ind > tbody > tr > td > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-ind > tbody > tr > td > div > input{
+  min-width: 60px!important;
+}

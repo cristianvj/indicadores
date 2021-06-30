@@ -1,0 +1,479 @@
+{
+    "bdIndicadores": [
+        {
+            "id": 1,
+            "areaClave": "Dir. Administrativa y Financiera",
+            "coordinacion": "Auditoría de cuentas médicas",
+            "lider": "Dra. Viviana Escobar",
+            "objetivoEstratégico": "Mallamas EPS-I SOSTENIBLE",
+            "objectivo": "Controlar el costo medico derivado de los sevicios de salud prestados a nuestros afiliados",
+            "indicadores": [
+                {
+                    "numeroIndicador":"IN-10",
+                    "nombreIndicador": "% de cumplimiento en IPS priorizadas",
+                    "lineaBase": "SD",
+                    "unidadMedida": "%",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "periodicidad": 6,
+                    "meta2021": 30,
+                    "numerador": [2, 2],
+                    "denominador": [0, 0],
+                    "analisis": "aert erv"
+                },
+                {
+                    "numeroIndicador":"IN-11",
+                    "nombreIndicador": "Promedio días de estancia en UCI adulto",
+                    "lineaBase": "15 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "días",
+                    "periodicidad": 2,
+                    "meta2021": "10",
+                    "numerador": [1518, 0, 0, 0, 0, 0],
+                    "denominador": [172,0, 0, 0, 0, 0],
+                    "analisis": "aert erv"
+                },  
+                {
+                    "numeroIndicador":"IN-12",
+                    "nombreIndicador": "Promedio días de estancia UCIN",
+                    "lineaBase": "18 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "10 días",
+                    "numerador": [322, 0, 0, 0, 0, 0],
+                    "denominador": [41,0, 0, 0, 0, 0],
+                    "analisis": "aert erv"
+                },
+                {
+                    "numeroIndicador":"IN-13",
+                    "nombreIndicador": "Promedio días de estancia en ortopedia de pacientes que  requieren material de osteosíntesis para cirugía",
+                    "lineaBase": "8 días",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "4 días",
+                    "numerador": [0, 0, 0, 0, 0, 0],
+                    "denominador": [0,0, 0, 0, 0, 0],
+                    "analisis": "aert erv"
+                },
+                {
+                    "numeroIndicador":"IN-14",
+                    "nombreIndicador": "% Pacientes visitados en las instituciones priorizados",
+                    "lineaBase": "4%",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "20",
+                    "numerador": [200, 0, 0, 0, 0, 0],
+                    "denominador": [200,0, 0, 0, 0, 0],
+                    "analisis": "aert erv"
+                }, 
+                {
+                    "numeroIndicador":"IN-15",
+                    "nombreIndicador": "% Gestión de trámites administrativos para los pacientes hospitalizados.",
+                    "lineaBase": "40 %",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "90",
+                    "numerador": [187, 0, 0, 0, 0, 0],
+                    "denominador": [198,0, 0, 0, 0, 0],
+                    "analisis": "aert erv"
+                },
+                {
+                    "numeroIndicador":"IN-16",
+                    "nombreIndicador": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "lineaBase": "55%",
+                    "fuenteDeCoordinacion": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [1937, 0, 0, 0, 0, 0],
+                    "denominador": [2508,0, 0, 0, 0, 0],
+                    "analisis": "aert erv"
+                },
+                {
+                    "numeroIndicador":"IN-17",
+                    "nombreIndicador": "% Cumplimiento de  glosas conciliadas dentro delos 120 días posteriores a la radicación de la cuenta.",
+                    "lineaBase": "50 %",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sense",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [363, 0, 0, 0, 0, 0],
+                    "denominador": [766,0, 0, 0, 0, 0],
+                    "analisis": "aert erv"
+                },
+                {
+                    "numeroIndicador":"IN-18",
+                    "nombreIndicador": "% de efectividad en la recuperación de glosa  propuesta ",
+                    "lineaBase": "50%",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sensen",
+                    "unidadMedida": "%",
+                    "periodicidad": 3,
+                    "meta2021": "60",
+                    "numerador": [425394004, 0, 0, 0, 0, 0],
+                    "denominador": [834638477,0, 0, 0, 0, 0],
+                    "analisis": "Para este indicador no se alacanza la meta, se presume a razon de personal nuevo en el proceso el cual no cuenta con los conocimientos suficientes para argumentar una glosa, se espera mejorar el indicador con el porceso de  capacitanciones "
+                }
+
+            ]
+        },
+        {
+            "id": 2,
+            "areaClave": "Dir. Administrativa y Financiera",
+            "coordinacion": "Tesorería",
+            "lider": "Dra. Viviana Escobar",
+            "objetivoEstratégico": "Mallamas EPS-I SOSTENIBLE",
+            "objectivo": "Controlar el costo medico derivado de los sevicios de salud prestados a nuestros afiliados",
+            "indicadores": [
+                {
+                    "numeroIndicador":"IN-10",
+                    "nombreIndicador": "% de cumplimiento en IPS priorizadas",
+                    "lineaBase": "SD",
+                    "unidadMedida": "%",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "periodicidad": 6,
+                    "meta2021": 30,
+                    "numerador": [0, 0],
+                    "denominador": [0, 0],
+                    "analisis": "aert erv"
+                }
+
+            ]
+        },
+        {
+            "id": 3,
+            "areaClave": "Dir. Administrativa y Financiera",
+            "coordinacion": "Cartera",
+            "lider": "Dra. Viviana Escobar",
+            "objetivoEstratégico": "Mallamas EPS-I SOSTENIBLE",
+            "objectivo": "Controlar el costo medico derivado de los sevicios de salud prestados a nuestros afiliados",
+            "indicadores": [
+                {
+                    "numeroIndicador":"IN-10",
+                    "nombreIndicador": "% de cumplimiento en IPS priorizadas",
+                    "lineaBase": "SD",
+                    "unidadMedida": "%",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "periodicidad": 6,
+                    "meta2021": 30,
+                    "numerador": [0, 0],
+                    "denominador": [0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-11",
+                    "nombreIndicador": "Promedio días de estancia en UCI adulto",
+                    "lineaBase": "15 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "días",
+                    "periodicidad": 2,
+                    "meta2021": "10",
+                    "numerador": [1518, 0, 0, 0, 0, 0],
+                    "denominador": [172,0, 0, 0, 0, 0]
+                },  
+                {
+                    "numeroIndicador":"IN-12",
+                    "nombreIndicador": "Promedio días de estancia UCIN",
+                    "lineaBase": "18 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "10 días",
+                    "numerador": [322, 0, 0, 0, 0, 0],
+                    "denominador": [41,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-13",
+                    "nombreIndicador": "Promedio días de estancia en ortopedia de pacientes que  requieren material de osteosíntesis para cirugía",
+                    "lineaBase": "8 días",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "4 días",
+                    "numerador": [0, 0, 0, 0, 0, 0],
+                    "denominador": [0,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-14",
+                    "nombreIndicador": "% Pacientes visitados en las instituciones priorizados",
+                    "lineaBase": "4%",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "20",
+                    "numerador": [200, 0, 0, 0, 0, 0],
+                    "denominador": [200,0, 0, 0, 0, 0]
+                }, 
+                {
+                    "numeroIndicador":"IN-15",
+                    "nombreIndicador": "% Gestión de trámites administrativos para los pacientes hospitalizados.",
+                    "lineaBase": "40 %",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "90",
+                    "numerador": [187, 0, 0, 0, 0, 0],
+                    "denominador": [198,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-16",
+                    "nombreIndicador": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "lineaBase": "55%",
+                    "fuenteDeCoordinacion": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [1937, 0, 0, 0, 0, 0],
+                    "denominador": [2508,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-17",
+                    "nombreIndicador": "% Cumplimiento de  glosas conciliadas dentro delos 120 días posteriores a la radicación de la cuenta.",
+                    "lineaBase": "50 %",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sense",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [363, 0, 0, 0, 0, 0],
+                    "denominador": [766,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-18",
+                    "nombreIndicador": "% de efectividad en la recuperación de glosa  propuesta ",
+                    "lineaBase": "50%",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sensen",
+                    "unidadMedida": "%",
+                    "periodicidad": 3,
+                    "meta2021": "60",
+                    "numerador": [425394004, 0, 0, 0, 0, 0],
+                    "denominador": [834638477,0, 0, 0, 0, 0],
+                    "analisis": ["Para este indicador no se alacanza la meta, se presume a razon de personal nuevo en el proceso el cual no cuenta con los conocimientos suficientes para argumentar una glosa, se espera mejorar el indicador con el porceso de  capacitanciones ",null,null,null]
+                }
+
+            ]
+        },
+        {
+            "id": 4,
+            "areaClave": "Dir. Administrativa y Financiera",
+            "coordinacion": "Movilidad",
+            "lider": "Diana Paguay",
+            "objetivoEstratégico": "Mallamas EPS-I SOSTENIBLE",
+            "objectivo": "Controlar el costo medico derivado de los sevicios de salud prestados a nuestros afiliados",
+            "indicadores": [
+                {
+                    "numeroIndicador":"IN-10",
+                    "nombreIndicador": "% de cumplimiento en IPS priorizadas",
+                    "lineaBase": "SD",
+                    "unidadMedida": "%",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "periodicidad": 6,
+                    "meta2021": 30,
+                    "numerador": [0, 0],
+                    "denominador": [0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-11",
+                    "nombreIndicador": "Promedio días de estancia en UCI adulto",
+                    "lineaBase": "15 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "días",
+                    "periodicidad": 2,
+                    "meta2021": "10",
+                    "numerador": [1518, 0, 0, 0, 0, 0],
+                    "denominador": [172,0, 0, 0, 0, 0]
+                },  
+                {
+                    "numeroIndicador":"IN-12",
+                    "nombreIndicador": "Promedio días de estancia UCIN",
+                    "lineaBase": "18 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "10 días",
+                    "numerador": [322, 0, 0, 0, 0, 0],
+                    "denominador": [41,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-13",
+                    "nombreIndicador": "Promedio días de estancia en ortopedia de pacientes que  requieren material de osteosíntesis para cirugía",
+                    "lineaBase": "8 días",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "4 días",
+                    "numerador": [0, 0, 0, 0, 0, 0],
+                    "denominador": [0,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-14",
+                    "nombreIndicador": "% Pacientes visitados en las instituciones priorizados",
+                    "lineaBase": "4%",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "20",
+                    "numerador": [200, 0, 0, 0, 0, 0],
+                    "denominador": [200,0, 0, 0, 0, 0]
+                }, 
+                {
+                    "numeroIndicador":"IN-15",
+                    "nombreIndicador": "% Gestión de trámites administrativos para los pacientes hospitalizados.",
+                    "lineaBase": "40 %",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "90",
+                    "numerador": [187, 0, 0, 0, 0, 0],
+                    "denominador": [198,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-16",
+                    "nombreIndicador": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "lineaBase": "55%",
+                    "fuenteDeCoordinacion": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [1937, 0, 0, 0, 0, 0],
+                    "denominador": [2508,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-17",
+                    "nombreIndicador": "% Cumplimiento de  glosas conciliadas dentro delos 120 días posteriores a la radicación de la cuenta.",
+                    "lineaBase": "50 %",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sense",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [363, 0, 0, 0, 0, 0],
+                    "denominador": [766,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-18",
+                    "nombreIndicador": "% de efectividad en la recuperación de glosa  propuesta ",
+                    "lineaBase": "50%",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sensen",
+                    "unidadMedida": "%",
+                    "periodicidad": 3,
+                    "meta2021": "60",
+                    "numerador": [425394004, 0, 0, 0, 0, 0],
+                    "denominador": [834638477,0, 0, 0, 0, 0],
+                    "analisis": ["Para este indicador no se alacanza la meta, se presume a razon de personal nuevo en el proceso el cual no cuenta con los conocimientos suficientes para argumentar una glosa, se espera mejorar el indicador con el porceso de  capacitanciones ",null,null,null]
+                }
+
+            ]
+        },
+        {
+            "id": 5,
+            "areaClave": "Dir. Administrativa y Financiera",
+            "coordinacion": "Contabilidad",
+            "lider": "Fernando Erazo",
+            "objetivoEstratégico": "Mallamas EPS-I SOSTENIBLE",
+            "objectivo": "Controlar el costo medico derivado de los sevicios de salud prestados a nuestros afiliados",
+            "indicadores": [
+                {
+                    "numeroIndicador":"IN-10",
+                    "nombreIndicador": "% de cumplimiento en IPS priorizadas",
+                    "lineaBase": "SD",
+                    "unidadMedida": "%",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "periodicidad": 6,
+                    "meta2021": 30,
+                    "numerador": [0, 0],
+                    "denominador": [0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-11",
+                    "nombreIndicador": "Promedio días de estancia en UCI adulto",
+                    "lineaBase": "15 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "días",
+                    "periodicidad": 2,
+                    "meta2021": "10",
+                    "numerador": [1518, 0, 0, 0, 0, 0],
+                    "denominador": [172,0, 0, 0, 0, 0]
+                },  
+                {
+                    "numeroIndicador":"IN-12",
+                    "nombreIndicador": "Promedio días de estancia UCIN",
+                    "lineaBase": "18 días",
+                    "fuenteDeCoordinacion": "FRC-017",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "10 días",
+                    "numerador": [322, 0, 0, 0, 0, 0],
+                    "denominador": [41,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-13",
+                    "nombreIndicador": "Promedio días de estancia en ortopedia de pacientes que  requieren material de osteosíntesis para cirugía",
+                    "lineaBase": "8 días",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "Días",
+                    "periodicidad": 2,
+                    "meta2021": "4 días",
+                    "numerador": [0, 0, 0, 0, 0, 0],
+                    "denominador": [0,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-14",
+                    "nombreIndicador": "% Pacientes visitados en las instituciones priorizados",
+                    "lineaBase": "4%",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "20",
+                    "numerador": [200, 0, 0, 0, 0, 0],
+                    "denominador": [200,0, 0, 0, 0, 0]
+                }, 
+                {
+                    "numeroIndicador":"IN-15",
+                    "nombreIndicador": "% Gestión de trámites administrativos para los pacientes hospitalizados.",
+                    "lineaBase": "40 %",
+                    "fuenteDeCoordinacion": "RC-FR-017 REGISTRO DE VICITA AUDITORIA CONCURRENTE ",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "90",
+                    "numerador": [187, 0, 0, 0, 0, 0],
+                    "denominador": [198,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-16",
+                    "nombreIndicador": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "lineaBase": "55%",
+                    "fuenteDeCoordinacion": "% cumplimiento en la desagregación correcta de las cuentas radicadas",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [1937, 0, 0, 0, 0, 0],
+                    "denominador": [2508,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-17",
+                    "nombreIndicador": "% Cumplimiento de  glosas conciliadas dentro delos 120 días posteriores a la radicación de la cuenta.",
+                    "lineaBase": "50 %",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sense",
+                    "unidadMedida": "%",
+                    "periodicidad": 2,
+                    "meta2021": "80",
+                    "numerador": [363, 0, 0, 0, 0, 0],
+                    "denominador": [766,0, 0, 0, 0, 0]
+                },
+                {
+                    "numeroIndicador":"IN-18",
+                    "nombreIndicador": "% de efectividad en la recuperación de glosa  propuesta ",
+                    "lineaBase": "50%",
+                    "fuenteDeCoordinacion": "sistema de informacion SIRIS cuentas por pagar y qlik sensen",
+                    "unidadMedida": "%",
+                    "periodicidad": 3,
+                    "meta2021": "60",
+                    "numerador": [425394004, 0, 0, 0, 0, 0],
+                    "denominador": [834638477,0, 0, 0, 0, 0],
+                    "analisis": ["Para este indicador no se alacanza la meta, se presume a razon de personal nuevo en el proceso el cual no cuenta con los conocimientos suficientes para argumentar una glosa, se espera mejorar el indicador con el porceso de  capacitanciones ",null,null,null]
+                }
+
+            ]
+        }
+    ]
+}
