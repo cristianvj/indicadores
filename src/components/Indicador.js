@@ -9,8 +9,10 @@ const Indicador = props => {
     const [analisis, setAnalisis] = useState('')
 
     useEffect(()=>{
-        console.log('indActivo.numerador: ' + indActivo.numerador)
+        //console.log('indActivo.numerador: ' + indActivo.numerador)
         setNumerador(indActivo.numerador)
+        setDenominador(indActivo.denominador)
+        setAnalisis(indActivo.analisis)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [indActivo])
 
@@ -24,7 +26,25 @@ const Indicador = props => {
 
     const handleForm = e => {
         e.preventDefault()
-        console.log(numerador)
+        //console.log(numerador)
+    }
+
+    const handleNumerador = (n, id) => {
+        console.log(`n: ${n} - id: ${id}`)
+        const nuevoNumerador = numerador.map((item, itemId) => {
+            if(itemId === id) return n
+            return item
+        })
+        setNumerador(nuevoNumerador)
+    }
+
+    const handleDenominador = (n, id) => {
+        console.log(`n: ${n} - id: ${id}`)
+        const nuevoDenominador = denominador.map((item, itemId) => {
+            if(itemId === id) return n
+            return item
+        })
+        setDenominador(nuevoDenominador)
     }
 
     return (    
@@ -62,18 +82,17 @@ const Indicador = props => {
                                         </tr>
                                         <tr>
                                             {
-                                                console.log('numerador: '+ numerador)
+                                                //console.log('numerador: '+ numerador)
                                             }
                                             <th scope="row">Numerador</th>
                                             {
                                                 numerador.map((n, id) => (
                                                     <td key={id}>
-                                                        {console.log('n: '+n)}
                                                         <div>
                                                             <input 
                                                                 type="number" 
                                                                 value={`${Number(n)}`} className="form-control m-1" 
-                                                                onChange={e=>setNumerador(e.target.value)}
+                                                                onChange={e=>handleNumerador(e.target.value, id)}
                                                             />%
                                                         </div>
                                                     </td>
@@ -82,36 +101,19 @@ const Indicador = props => {
                                         </tr>
                                         <tr>
                                             <th scope="row">Denominador</th>
-                                            <td>
-                                                <div>
-                                                    <input type="number" value={numerador} className="form-control m-1" />%
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <input type="number" value="20" className="form-control m-1" />%
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <input type="number" value="20" className="form-control m-1" />%
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <input type="number" value="20" className="form-control m-1" />%
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <input type="number" value="20" className="form-control m-1" />%
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <input type="number" value="20" className="form-control m-1" />%
-                                                </div>
-                                            </td>
+                                            {
+                                                denominador.map((n, id) => (
+                                                    <td key={id}>
+                                                        <div>
+                                                            <input 
+                                                                type="number" 
+                                                                value={`${Number(n)}`} className="form-control m-1" 
+                                                                onChange={e=>handleDenominador(e.target.value, id)}
+                                                            />%
+                                                        </div>
+                                                    </td>
+                                                ))
+                                            }
                                         </tr>
                                     </tbody>
                                 </table>
@@ -123,8 +125,8 @@ const Indicador = props => {
                                     rows="5"
                                     id="floatingTextarea"
                                     onChange={e=>setAnalisis(e.target.value)}
-                                >
-                                    {analisis}
+                                    defaultValue={analisis}
+                                >  
                                 </textarea>
                                 <label htmlFor="floatingTextarea">Análisis de los indicadores</label>
                             </div>
@@ -133,7 +135,7 @@ const Indicador = props => {
                                 className="btn btn-success mt-4"
                                 onClick={handleForm}
                             >
-                                Success
+                                Guardar
                             </button>
                         </div>
                     </form>

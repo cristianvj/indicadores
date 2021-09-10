@@ -26,3 +26,6 @@
 .table-ind > tbody > tr > td > div > input{
   min-width: 60px!important;
 }
+textarea.form-control {
+  min-height: 150px!important;
+}
