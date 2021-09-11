@@ -6,22 +6,32 @@ const Indicador = props => {
 
     const [numerador, setNumerador] = useState([])
     const [denominador, setDenominador] = useState([])
-    const [analisis, setAnalisis] = useState('')
+    const [analisis, setAnalisis] = useState([])
+
 
     useEffect(()=>{
         //console.log('indActivo.numerador: ' + indActivo.numerador)
         setNumerador(indActivo.numerador)
         setDenominador(indActivo.denominador)
         setAnalisis(indActivo.analisis)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [indActivo])
-
-    let periodicidad = ''
-    if(indActivo.periodicidad === 1) periodicidad = 'Mensual'
-    if(indActivo.periodicidad === 2) periodicidad = 'Bimensual'
-    if(indActivo.periodicidad === 3) periodicidad = 'Trimestral'
-    if(indActivo.periodicidad === 6) periodicidad = 'Semestral'
-    if(indActivo.periodicidad === 12) periodicidad = 'Anual'
+    
+    const periodicidad = indActivo.periodicidad || 0
+    let periodicidadString = ''
+    let perioricidadArr = []
+    
+    if(periodicidad === 1) periodicidadString = 'Mensual'
+    if(periodicidad === 2) periodicidadString = 'Bimensual'
+    if(periodicidad === 3) periodicidadString = 'Trimestral'
+    if(periodicidad === 6) periodicidadString = 'Semestral'
+    if(periodicidad === 12) periodicidadString = 'Anual'
+    
+    let count = 1
+    for(let i=1; i<=12; i+=periodicidad){
+        perioricidadArr = [...perioricidadArr, count]
+        count ++
+    }
 
 
     const handleForm = e => {
@@ -47,6 +57,18 @@ const Indicador = props => {
         setDenominador(nuevoDenominador)
     }
 
+    const handleAnalisis = (a, id) => {
+        console.log(`a: ${a} - id: ${id}`)
+        const nuevoAnalisis = analisis.map((item, itemId) => {
+            if(itemId === id) return a
+            return item
+        })
+        setAnalisis(nuevoAnalisis)
+    }
+
+    console.log(indActivo)
+    console.log(analisis)
+
     return (    
             <div className="tab-content" id="myTabContent">
             <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -54,7 +76,7 @@ const Indicador = props => {
                 <div className="card-body bg-light">
                     <h5 className="card-title mt-2">{indActivo.nombreIndicador}</h5>
                     <p className="card-text"><b>Fuente de Informacion: </b> {indActivo.fuenteDeCoordinacion}</p>
-                    <p className="card-text"><b>periodicidad: </b> {periodicidad}</p>
+                    <p className="card-text"><b>periodicidad: </b> {periodicidadString}</p>
                     <div className="container px-4">
                         <div className="row gx-5">
                             <div className="col">
@@ -73,12 +95,12 @@ const Indicador = props => {
                                     <tbody>
                                         <tr>
                                             <th scope="row">Periodo</th>
-                                            <td><b>1</b></td>
-                                            <td><b>2</b></td>
-                                            <td><b>3</b></td>
-                                            <td><b>4</b></td>
-                                            <td><b>5</b></td>
-                                            <td><b>6</b></td>
+                                            {
+                                                perioricidadArr.map(p => (
+
+                                                    <td key={p}><b>{p}</b></td>
+                                                ))
+                                            }
                                         </tr>
                                         <tr>
                                             {
@@ -118,18 +140,18 @@ const Indicador = props => {
                                     </tbody>
                                 </table>
                             </div>
-                            <div className="form-floating">
-                                <textarea 
-                                    className="form-control" 
-                                    placeholder="Analisis de indicadores"
-                                    rows="5"
-                                    id="floatingTextarea"
-                                    onChange={e=>setAnalisis(e.target.value)}
-                                    defaultValue={analisis}
-                                >  
-                                </textarea>
-                                <label htmlFor="floatingTextarea">Análisis de los indicadores</label>
-                            </div>
+                            {
+                                analisis.map( (a, id) => (
+                                    <div key={id} className="form-floating">
+                                        <input 
+                                            type="text" 
+                                            value={a ? a : 'Agregar análisis'} 
+                                            className="form-control m-1" 
+                                            onChange={e=>handleAnalisis(e.target.value, id)}
+                                        />
+                                    </div>
+                                ))
+                            }
                             <button 
                                 type="button" 
                                 className="btn btn-success mt-4"

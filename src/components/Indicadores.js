@@ -1,42 +1,32 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import Indicador from './Indicador'
-import axios from 'axios'
+import { useSelector } from 'react-redux'
+
 
 const Indicadores = () => {
 
-    const {urlIndicador} = useParams()
-    const [coordinacion, setCoordinacion] = useState({
-        id: null,
-        indicadores: []
-    })
+    const {urlCoordinacion} = useParams()
+
     const [indActivo, setIndActivo] = useState({})
     
-    useEffect(() => {
-        // Make a request for a user with a given ID
-        axios.get('http://localhost:4000/bdIndicadores')
-        .then(function (response) {
-            setCoordinacion(response.data.find(coordinacion => coordinacion.id === Number(urlIndicador)))
-        })
-        .catch(function (error) {
-        // handle error
-        console.log(error);
-        })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    const indicadoresStore = useSelector(state => state.indicadores.indicadores)
 
-    if(coordinacion){
+    const indicadoresCoordinacion = indicadoresStore.filter(indicador => indicador.responsableLider === urlCoordinacion)
+
+
+    if(indicadoresCoordinacion.length > 0){
         return (
             <div className="container mt-5">
                 <div className="header">
-                    <h2 className="title text-center">Indicadores Coordinación de {coordinacion.coordinacion}</h2>
+                    <h2 className="title text-center">Indicadores Coordinación de {urlCoordinacion}</h2>
                 </div>
                 <div className="row mt-5">
                     <div className="col-md-10 mx-auto">
                         <div>
                             <ul className="nav nav-tabs" id="myTab" role="tablist">
                                 {
-                                    coordinacion.indicadores.map(indicador=>(
+                                    indicadoresCoordinacion.map(indicador=>(
                                         <li 
                                             key={indicador.numeroIndicador}
                                             onClick={()=>setIndActivo(indicador)}
@@ -74,7 +64,7 @@ const Indicadores = () => {
             </div>
         )
     }else{
-        return <p>Id no encontrado</p>
+        return <p>{urlCoordinacion} no encontrado</p>
     }
 }
 

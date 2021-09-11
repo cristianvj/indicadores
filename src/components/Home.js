@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import logoMallamas from '../asets/logo.png'
 import {Link} from 'react-router-dom'
-import axios from 'axios'
+import { useSelector, useDispatch } from 'react-redux'
+import { fetchIndicadoresAction } from '../actions/indicadoresActions'
 
 
 const Home = () => {
 
+    const dispatch = useDispatch()
+
     const [selCoordinacion, setSelCoordinacion] = useState ()
-    const [coordinaciones, setCoordinaciones] = useState([])
     
     useEffect(() => {
-        // Make a request for a user with a given ID
-        axios.get('http://localhost:4000/bdIndicadores')
-        .then(function (response) {
-        // handle success
-        setCoordinaciones(response.data)
-        })
-        .catch(function (error) {
-        // handle error
-        console.log(error);
-        })
+        const getIndicadores = () => dispatch(fetchIndicadoresAction())
+        return getIndicadores()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const handleAddrTypeChange = e => console.log(setSelCoordinacion(e.target.value))
+    const indicadores = useSelector(state => state.indicadores.indicadores)
+    const isLoading = useSelector(state => state.indicadores.loading)
+    
+
+    const coordinacionesUnique = indicadores.map(indicador => indicador.responsableLider)
+        .filter((coordinacion, index, coordinaciones) => coordinaciones
+        .indexOf(coordinacion) === index
+    ).sort()
+
+    const handleAddrTypeChange = e => setSelCoordinacion(e.target.value)
 
     return (
         <>      
@@ -35,19 +38,26 @@ const Home = () => {
                             <h5 className="card-title">Seleccione su co ordinación</h5>
                             <p className="card-text w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempore quasi porro! Minima esse, veniam dolore architecto debitis nulla doloremque alias voluptas cupiditate quod nisi eveniet. Soluta corrupti dolorem perspiciatis.</p>
                             <form action="" className="mt-4">
-                                <select 
-                                    className="form-select select-coordinacion mx-auto" 
-                                    aria-label="Default select example"
-                                    onChange={e => handleAddrTypeChange(e)}
-                                >
-                                    <option defaultValue>--Seleccione una coordinación--</option>
-                                    {
-                                        coordinaciones.map(coordinacion=>(
-                                            <option key={coordinacion.id} value={coordinacion.id}>{coordinacion.coordinacion}</option>
-                                        ))
-                                    }
-                                </select>
-                                <Link to={`/indicadores/${selCoordinacion}`} type="button" className="btn btn-success mt-4">Ir a indicadores</Link>
+                                {
+                                    !isLoading ? (
+                                        <>
+                                            <select 
+                                                className="form-select select-coordinacion mx-auto" 
+                                                aria-label="Default select example"
+                                                onChange={e => handleAddrTypeChange(e)}
+                                            >
+                                                <option defaultValue>--Seleccione una coordinación--</option>
+                                                {
+                                                    coordinacionesUnique.map(coordinacion=>(
+                                                        <option key={coordinacion} value={coordinacion}>{coordinacion}</option>
+                                                    ))
+                                                }
+                                            </select>
+                                            <Link to={`/indicadores/${selCoordinacion}`} type="button" className="btn btn-success mt-4">Ir a indicadores</Link>
+                                        </>
+                                    )
+                                    : (<p>Loading....</p>)
+                                }
                             </form>
                             <p className="card-text mt-4"><small className="text-muted">@Jefatura de Planeación</small></p>
                         </div>
