@@ -10,10 +10,12 @@ const Indicador = props => {
 
 
     useEffect(()=>{
-        //console.log('indActivo.numerador: ' + indActivo.numerador)
         setNumerador(indActivo.numerador)
         setDenominador(indActivo.denominador)
         setAnalisis(indActivo.analisis)
+        console.log(indActivo.numerador)
+        console.log(indActivo.denominador)
+        console.log(indActivo.analisis)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [indActivo])
     
@@ -65,9 +67,6 @@ const Indicador = props => {
         })
         setAnalisis(nuevoAnalisis)
     }
-
-    console.log(indActivo)
-    console.log(analisis)
 
     return (    
             <div className="tab-content" id="myTabContent">

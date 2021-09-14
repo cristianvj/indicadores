@@ -12,6 +12,7 @@ const initialState = {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function(state = initialState, {type, payload}) {
+    console.log(`payload ${type}`)
     switch (type) {
         case START_FETCH_INDICADORES:
             return {

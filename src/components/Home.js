@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import logoMallamas from '../asets/logo.png'
 import {Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchIndicadoresAction } from '../actions/indicadoresActions'
+import { fetchIndicadores } from '../actions/indicadoresActions'
 
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
     const [selCoordinacion, setSelCoordinacion] = useState ()
     
     useEffect(() => {
-        const getIndicadores = () => dispatch(fetchIndicadoresAction())
+        const getIndicadores = () => dispatch(fetchIndicadores())
         return getIndicadores()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
