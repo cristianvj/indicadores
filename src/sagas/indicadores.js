@@ -10,10 +10,9 @@ import Swal from 'sweetalert2'
 function* getIndicadores(){
     try {
         const result = yield call(apiCall, 'GET', '/bdIndicadores')
-        console.log(result)
         yield put({ type: FETCH_INDICADOPRES_SUCCESS, payload: result})
     } catch (err) {
-        console.log(err)
+        yield put({ type: FETCH_INDICADORES_ERROR, payload: true})
         Swal.fire({
             icon: 'error',
             title: 'Hubo un error',
