@@ -1,24 +1,18 @@
 import React, {useState, useEffect} from 'react'
+import Chart from "react-google-charts";
 
 const Indicador = props => {
 
-    const {indActivo} = props
+    const { indActivo } = props
+    const { numerador, denominador, analisis, nombreIndicador, fuenteDeCoordinacion, lineaBase, meta2021 } = indActivo
 
-    const [numerador, setNumerador] = useState([])
-    const [denominador, setDenominador] = useState([])
-    const [analisis, setAnalisis] = useState([])
+    const [numeradorState, setNumerador] = useState([])
+    const [denominadorState, setDenominador] = useState([])
+    const [analisisState, setAnalisis] = useState([])
+    const [dataChart, setDataChart] = useState()
+    const [resultadoParcial, setResultadoParcial] = useState([])
+    const [resultadoTotal, setResultadoTotal] = useState(0)
 
-
-    useEffect(()=>{
-        setNumerador(indActivo.numerador)
-        setDenominador(indActivo.denominador)
-        setAnalisis(indActivo.analisis)
-        console.log(indActivo.numerador)
-        console.log(indActivo.denominador)
-        console.log(indActivo.analisis)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [indActivo])
-    
     const periodicidad = indActivo.periodicidad || 0
     let periodicidadString = ''
     let perioricidadArr = []
@@ -35,6 +29,40 @@ const Indicador = props => {
         count ++
     }
 
+    useEffect(()=>{
+        setNumerador(numerador)
+        setDenominador(denominador)
+        setAnalisis(analisis)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [indActivo])
+    
+    useEffect(() => {
+      handleDataChart()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [numeradorState, denominadorState])
+    
+
+    const handleDataChart = () => {
+      const numeradorChart = numeradorState === [] ? numerador : numeradorState
+      //const denominadorChart = denominadorState === [] ? denominador : denominadorState
+      let dataChartTmp = [['Periodo', 'Meta del año', 'Resultado por periodo']]
+      let resultadoParcialTmp = []
+      let resultadoTotalTmp = 0
+
+      numeradorChart.forEach((n, id) => {
+        dataChartTmp.push([`Periodo ${id+1}`, Number(meta2021), Number(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))])
+        
+        resultadoParcialTmp.push(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))
+      })
+
+      if(resultadoParcialTmp.length > 0){
+        resultadoTotalTmp = resultadoParcialTmp.reduce((prev, curr) => (Number(prev) + Number(curr)), 0)
+      }
+      
+      setResultadoTotal(resultadoTotalTmp / Number(resultadoParcialTmp.length))
+      setDataChart(dataChartTmp)
+      setResultadoParcial(resultadoParcialTmp)
+    }
 
     const handleForm = e => {
         e.preventDefault()
@@ -42,8 +70,7 @@ const Indicador = props => {
     }
 
     const handleNumerador = (n, id) => {
-        console.log(`n: ${n} - id: ${id}`)
-        const nuevoNumerador = numerador.map((item, itemId) => {
+        const nuevoNumerador = numeradorState.map((item, itemId) => {
             if(itemId === id) return n
             return item
         })
@@ -51,8 +78,7 @@ const Indicador = props => {
     }
 
     const handleDenominador = (n, id) => {
-        console.log(`n: ${n} - id: ${id}`)
-        const nuevoDenominador = denominador.map((item, itemId) => {
+        const nuevoDenominador = denominadorState.map((item, itemId) => {
             if(itemId === id) return n
             return item
         })
@@ -60,8 +86,7 @@ const Indicador = props => {
     }
 
     const handleAnalisis = (a, id) => {
-        console.log(`a: ${a} - id: ${id}`)
-        const nuevoAnalisis = analisis.map((item, itemId) => {
+        const nuevoAnalisis = analisisState.map((item, itemId) => {
             if(itemId === id) return a
             return item
         })
@@ -69,98 +94,136 @@ const Indicador = props => {
     }
 
     return (    
-            <div className="tab-content" id="myTabContent">
+        <div className="tab-content" id="myTabContent">
             <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div className="card bg-w w-100 ">
-                <div className="card-body bg-light">
-                    <h5 className="card-title mt-2">{indActivo.nombreIndicador}</h5>
-                    <p className="card-text"><b>Fuente de Informacion: </b> {indActivo.fuenteDeCoordinacion}</p>
-                    <p className="card-text"><b>periodicidad: </b> {periodicidadString}</p>
-                    <div className="container px-4">
-                        <div className="row gx-5">
-                            <div className="col">
-                            <div className="p-3 border bg-light"><b>Línea base:</b> {indActivo.lineaBase}</div>
+                <div className="card bg-w w-100 ">
+                    <div className="card-body bg-light">
+                        <h5 className="card-title mt-2">{nombreIndicador}</h5>
+                        <p className="card-text"><b>Fuente de Informacion: </b> {fuenteDeCoordinacion}</p>
+                        <p className="card-text"><b>periodicidad: </b> {periodicidadString}</p>
+                        <div className="container px-4">
+                            <div className="row gx-5">
+                                <div className="col">
+                                <div className="p-3 border bg-light"><b>Línea base:</b> {lineaBase}</div>
+                                </div>
+                                <div className="col">
+                                <div className="p-3 border bg-light"><b>Meta 2021:</b> {meta2021}%</div>
+                                </div>
+                                <div className="col ">
+                                <div className={`p-3 border  ${
+                                  resultadoTotal >= 90 ? `bg-success text-light` : resultadoTotal >= 50 ? `bg-warning` : `bg-danger text-light` 
+                                }`}><b>Resultado Total:</b> {resultadoTotal}%</div>
+                                </div>
                             </div>
-                            <div className="col">
-                            <div className="p-3 border bg-light"><b>Meta 2021:</b> {indActivo.meta2021}%</div>
+                        </div>
+
+                        <form action="">
+                            <div className="container w-90">
+                                <div className="table-responsive mt-4">
+                                    <table className="table table-bordered border-success text-center table-ind">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Periodo</th>
+                                                {
+                                                    perioricidadArr.map(p => (
+
+                                                        <td key={p}><b>{p}</b></td>
+                                                    ))
+                                                }
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Numerador</th>
+                                                {
+                                                    numeradorState.map((n, id) => (
+                                                        <td key={id}>
+                                                            <div>
+                                                                <input 
+                                                                    type="number" 
+                                                                    value={`${Number(n)}`} className="form-control m-1" 
+                                                                    onChange={e=>handleNumerador(e.target.value, id)}
+                                                                />%
+                                                            </div>
+                                                        </td>
+                                                    ))
+                                                }
+                                            </tr>
+                                          <tr>
+                                              <th scope="row">Denominador</th>
+                                              {
+                                                  denominadorState.map((n, id) => (
+                                                      <td key={id}>
+                                                          <div>
+                                                              <input 
+                                                                  type="number" 
+                                                                  value={`${Number(n)}`} className="form-control m-1" 
+                                                                  onChange={e=>handleDenominador(e.target.value, id)}
+                                                              />%
+                                                          </div>
+                                                      </td>
+                                                  ))
+                                              }
+                                          </tr>
+                                          <tr>
+                                          <th scope="row">Resultado Parcial</th>
+                                          {
+                                            resultadoParcial.map((r, id) => {
+                                              return (
+                                                <td key={id}>
+                                                  <div>
+                                                    <p> {r} %</p>
+                                                  </div>
+                                                </td>
+                                              )})
+                                          }
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {
+                                    analisisState.map( (a, id) => (
+                                        <div key={id} className="form-floating">
+                                            <input 
+                                                type="text" 
+                                                value={a ? a : 'Agregar análisis'} 
+                                                className="form-control m-1" 
+                                                onChange={e=>handleAnalisis(e.target.value, id)}
+                                            />
+                                        </div>
+                                    ))
+                                }
+                                <button 
+                                    type="button" 
+                                    className="btn btn-success mt-4"
+                                    onClick={handleForm}
+                                >
+                                    Guardar
+                                </button>
+                            </div>
+                        </form>
+                        <div className="card bg-w w-100 mt-3">
+                            <div className="card-body bg-white">
+                                <Chart
+                                    width={'100%'}
+                                    height={550}
+                                    chartType="ColumnChart"
+                                    loader={<div>Cargando Gráficos</div>}
+                                    data={dataChart}
+                                    options={{
+                                      title: `Graficos del indicador ${indActivo.numeroIndicador}`,
+                                      chartArea: { width: '65%' },
+                                      hAxis: {
+                                          title: 'Periodo',
+                                          minValue: 0,
+                                      },
+                                      vAxis: {
+                                          title: 'Porcentaje',
+                                      },
+                                    }}
+                                    legendToggle
+                                />
                             </div>
                         </div>
                     </div>
-
-                    <form action="">
-                        <div className="container w-90">
-                            <div className="table-responsive mt-4">
-                                <table className="table table-bordered border-success text-center table-ind">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Periodo</th>
-                                            {
-                                                perioricidadArr.map(p => (
-
-                                                    <td key={p}><b>{p}</b></td>
-                                                ))
-                                            }
-                                        </tr>
-                                        <tr>
-                                            {
-                                                //console.log('numerador: '+ numerador)
-                                            }
-                                            <th scope="row">Numerador</th>
-                                            {
-                                                numerador.map((n, id) => (
-                                                    <td key={id}>
-                                                        <div>
-                                                            <input 
-                                                                type="number" 
-                                                                value={`${Number(n)}`} className="form-control m-1" 
-                                                                onChange={e=>handleNumerador(e.target.value, id)}
-                                                            />%
-                                                        </div>
-                                                    </td>
-                                                ))
-                                            }
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Denominador</th>
-                                            {
-                                                denominador.map((n, id) => (
-                                                    <td key={id}>
-                                                        <div>
-                                                            <input 
-                                                                type="number" 
-                                                                value={`${Number(n)}`} className="form-control m-1" 
-                                                                onChange={e=>handleDenominador(e.target.value, id)}
-                                                            />%
-                                                        </div>
-                                                    </td>
-                                                ))
-                                            }
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            {
-                                analisis.map( (a, id) => (
-                                    <div key={id} className="form-floating">
-                                        <input 
-                                            type="text" 
-                                            value={a ? a : 'Agregar análisis'} 
-                                            className="form-control m-1" 
-                                            onChange={e=>handleAnalisis(e.target.value, id)}
-                                        />
-                                    </div>
-                                ))
-                            }
-                            <button 
-                                type="button" 
-                                className="btn btn-success mt-4"
-                                onClick={handleForm}
-                            >
-                                Guardar
-                            </button>
-                        </div>
-                    </form>
-                </div>
                 </div>
             </div>
         </div>

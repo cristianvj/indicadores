@@ -11,14 +11,16 @@ const Reportes = () => {
             <div className="row justify-content-md-center pt-2">
                 <div className="col col-lg-4">
                 <select className="form-select" aria-label="Default select example">
-                    <option selected>-- seleccione una opción --</option>
-                    <option value="1">Indicadores Aceptables</option>
-                    <option value="2">Indicadores Regulares</option>
-                    <option value="3">Indicadores Bajos</option>
-                    <option value="3">Perspectiva</option>
-                    <option value="3">Eje</option>
-                    <option value="3">Area de éxito</option>
+                    <option defaultValue>-- seleccione una opción --</option>
+                    <option defaultValue="1">Indicadores Aceptables</option>
+                    <option defaultValue="2">Indicadores Regulares</option>
+                    <option defaultValue="3">Indicadores Bajos</option>
                 </select>
+                </div>
+            </div>
+            <div className="row justify-content-md-center pt-2">
+                <div className="col col-lg-4">
+                <input className="col col-lg-12" type="text" placeholder="Buscar..."/>
                 </div>
             </div>
             <div className="row justify-content-md-center pt-4">
@@ -43,7 +45,7 @@ const Reportes = () => {
                     </thead>
                     <tbody>
                     <tr className="table-success">
-                        <td scope="row">Mallamas EPS Responsable</td>
+                        <td>Mallamas EPS Responsable</td>
                         <td>Atención al usuario</td>
                         <td>Cliente</td>
                         <td>dialogo sin barreras para un buen vivir</td>
@@ -53,7 +55,7 @@ const Reportes = () => {
                         <th>63%</th>
                     </tr>
                     <tr className="table-danger">
-                        <td scope="row">Mallamas EPS Responsable</td>
+                        <td>Mallamas EPS Responsable</td>
                         <td>Direccion de salud</td>
                         <td>Financiera</td>
                         <td>Tejiendo el modelo propio e intercultural de atención en salud para el buen vivir</td>
@@ -63,7 +65,7 @@ const Reportes = () => {
                         <th>25%</th>
                     </tr>
                     <tr className="table-warning">
-                        <td scope="row">Mallamas EPS Responsable</td>
+                        <td>Mallamas EPS Responsable</td>
                         <td>Direccion de salud</td>
                         <td>Proceso Interno</td>
                         <td>Planear y Racionalizar Costo Médico</td>
