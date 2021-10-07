@@ -20,7 +20,7 @@
             "meta2021": 30,
             "numerador": [10, 30],
             "denominador": [12, 30],
-            "analisis": ["Como se habia manifestado en la reunion sostenida con  planeacion, este indicador es compartido y liderado por la direccion de calidad quien debe convocar a una reunion para analizar y organizar el tema; hasta la fecha no se ha recibido ninguna invitacion. ",null,null,null]
+            "analisis": ["Como se habia manifestado en la reunion sostenida con  planeacion, este indicador es compartido y liderado por la direccion de calidad quien debe convocar a una reunion para analizar y organizar el tema; hasta la fecha no se ha recibido ninguna invitacion. ",null]
         },
         {
             "id": 2,
@@ -42,7 +42,7 @@
             "meta2021": "10",
             "numerador": [1518, 0, 0, 0, 0, 0],
             "denominador": [172,0, 0, 0, 0, 0],
-            "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 8 dias en promedio de estancia UCI adultos. ",null,null,null]
+            "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 8 dias en promedio de estancia UCI adultos. ",null,null,null, null,null]
         },  
         {
             "id": 3,
@@ -64,7 +64,7 @@
             "meta2021": "10 días",
             "numerador": [322, 0, 0, 0, 0, 0],
             "denominador": [41,0, 0, 0, 0, 0],
-            "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 7 dias en promedio de estancia UCI neonatos, alcanzando la meta propuesta",null,null,null]
+            "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 7 dias en promedio de estancia UCI neonatos, alcanzando la meta propuesta",null,null,null,null,null]
         },
         {
             "id": 4,
@@ -86,7 +86,7 @@
             "meta2021": "4 días",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": ["No se priorizo este servicio por motivo de pandemia, ya que en este entonces nos encontrabamos en el segundo pico y se priorizo servicio de UCI para realizar desescalomanientos ",null,null,null]
+            "analisis": ["No se priorizo este servicio por motivo de pandemia, ya que en este entonces nos encontrabamos en el segundo pico y se priorizo servicio de UCI para realizar desescalomanientos ",null,null,null,null,null]
         },
         {
             "id": 5,
@@ -108,7 +108,7 @@
             "meta2021": "20",
             "numerador": [200, 0, 0, 0, 0, 0],
             "denominador": [200,0, 0, 0, 0, 0],
-            "analisis": ["Indicador obtenido netamente del servicio de UCI, por lo cual supera la meta de manera significativa; ya que el indicador es realizado con el total de pacientes hospitalizados de todos los servicios",null,null,null]
+            "analisis": ["Indicador obtenido netamente del servicio de UCI, por lo cual supera la meta de manera significativa; ya que el indicador es realizado con el total de pacientes hospitalizados de todos los servicios",null,null,null,null,null]
         }, 
         {
             "id": 6,
@@ -130,7 +130,7 @@
             "meta2021": "90",
             "numerador": [187, 0, 0, 0, 0, 0],
             "denominador": [198,0, 0, 0, 0, 0],
-            "analisis": ["Se cumplio con la meta propuesta en tramites gestionados",null,null,null]
+            "analisis": ["Se cumplio con la meta propuesta en tramites gestionados",null,null,null,null,null]
         },
         {
             "id": 7,
@@ -152,7 +152,7 @@
             "meta2021": "80",
             "numerador": [1937, 0, 0, 0, 0, 0],
             "denominador": [2508,0, 0, 0, 0, 0],
-            "analisis": ["Para este indicador no se alcanza la meta, pero es minimo el valor que faltaria para cumplir con el objetivo",null,null,null]
+            "analisis": ["Para este indicador no se alcanza la meta, pero es minimo el valor que faltaria para cumplir con el objetivo",null,null,null,null,null]
         },
         {
             "id": 8,
@@ -174,7 +174,7 @@
             "meta2021": "80",
             "numerador": [363, 0, 0, 0, 0, 0],
             "denominador": [766,0, 0, 0, 0, 0],
-            "analisis": ["Para este indicador aun no se cumple el tiempo limite establecido, ya que se deberia estar reportando en el mes de junio; mas sin embargo se reporta lo que se lleva adelantado hasta la fecha con un porcentaje del 47% dato positivo teniendo en cuenta aun hace falta aproximadamente 2 meses de plazo limite del indicador",null,null,null]
+            "analisis": ["Para este indicador aun no se cumple el tiempo limite establecido, ya que se deberia estar reportando en el mes de junio; mas sin embargo se reporta lo que se lleva adelantado hasta la fecha con un porcentaje del 47% dato positivo teniendo en cuenta aun hace falta aproximadamente 2 meses de plazo limite del indicador",null,null,null,null,null]
         },
         {
             "id": 9,
@@ -194,8 +194,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "60",
-            "numerador": [425394004, 0, 0, 0, 0, 0],
-            "denominador": [834638477,0, 0, 0, 0, 0],
+            "numerador": [425394004, 0, 0, 0],
+            "denominador": [834638477,0, 0, 0],
             "analisis": ["Para este indicador no se alacanza la meta, se presume a razon de personal nuevo en el proceso el cual no cuenta con los conocimientos suficientes para argumentar una glosa, se espera mejorar el indicador con el porceso de  capacitanciones ",null,null,null]
         },    
         {
@@ -216,9 +216,9 @@
             "unidadMedida": "%",
             "periodicidad": 1,
             "meta2021": "100",
-            "numerador": [0, 0, 690307126, 0, 0, 0],
-            "denominador": [0,0, 6195529681, 0, 0, 0],
-            "analisis": [null,null,"Para el año 2021 se debe de legalizar el 100% de los anticipos hasta la vigencia 2018 por requerimiento de la contraloria en el primer trimestre se ha cumplido con el 11% ya que no se contaba con el personal necesario para realizar el proceso de revision ademas se esta realizando el proceso de depuracion con los diferentes prestadores a traves del envio de derechos de peticion para cumplir con la legalizacon deestos anticipos",null,null]
+            "numerador": [0, 0, 690307126, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "denominador": [0,0, 6195529681, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "analisis": [null,null,"Para el año 2021 se debe de legalizar el 100% de los anticipos hasta la vigencia 2018 por requerimiento de la contraloria en el primer trimestre se ha cumplido con el 11% ya que no se contaba con el personal necesario para realizar el proceso de revision ademas se esta realizando el proceso de depuracion con los diferentes prestadores a traves del envio de derechos de peticion para cumplir con la legalizacon deestos anticipos",null,null,null,null,null,null,null,null,null]
         },
                     
         {
@@ -239,8 +239,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "60",
-            "numerador": [18, 0, 0, 0, 0, 0],
-            "denominador": [72,0, 0, 0, 0, 0],
+            "numerador": [18, 0, 0, 0],
+            "denominador": [72,0, 0, 0],
             "analisis": ["Para el primer trimestre del año 2021 no se cumpli con el 60% de la depuracion de cartera debido a incovenientes administrativos internos dentro del area de cartera (asigancion de claves, falta de personal, personal nuevo, jornadas de capacitacion) ",null,null,null]
         },
         {
@@ -261,9 +261,9 @@
             "unidadMedida": "%",
             "periodicidad": 1,
             "meta2021": "60",
-            "numerador": [950, 913, 857, 0, 0, 0],
-            "denominador": [1243,1188, 1053, 0, 0, 0],
-            "analisis": ["para el primer trimestre del año 2021 el proceso de gestion de cobro de cartera morosa, se cumple con el 76% aun asi se siguen presnetando errores en calidad del dato, gererando duplicidad de periodos en mora, ademas se realiza la depuracion de las incosnsitencias en las afiliaciones  y desactualizacion de datos de contacto del afilido para la gestion de cobro","para el primer trimestre del año 2021 el proceso de gestion de cobro de cartera morosa, se cumple con el 77% aun asi se siguen presnetando errores en calidad del dato, gererando duplicidad de periodos en mora, ademas se realiza la depuracion de las incosnsitencias en las afiliaciones  y desactualizacion de datos de contacto del afilido para la gestion de cobro","para el primer trimestre del año 2021 el proceso de gestion de cobro de cartera morosa, se cumple con el 81% aun asi se siguen presnetando errores en calidad del dato, gererando duplicidad de periodos en mora, ademas se realiza la depuracion de las incosnsitencias en las afiliaciones  y desactualizacion de datos de contacto del afilido para la gestion de cobro",null]
+            "numerador": [950, 913, 857, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "denominador": [1243,1188, 1053, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "analisis": ["para el primer trimestre del año 2021 el proceso de gestion de cobro de cartera morosa, se cumple con el 76% aun asi se siguen presnetando errores en calidad del dato, gererando duplicidad de periodos en mora, ademas se realiza la depuracion de las incosnsitencias en las afiliaciones  y desactualizacion de datos de contacto del afilido para la gestion de cobro","para el primer trimestre del año 2021 el proceso de gestion de cobro de cartera morosa, se cumple con el 77% aun asi se siguen presnetando errores en calidad del dato, gererando duplicidad de periodos en mora, ademas se realiza la depuracion de las incosnsitencias en las afiliaciones  y desactualizacion de datos de contacto del afilido para la gestion de cobro","para el primer trimestre del año 2021 el proceso de gestion de cobro de cartera morosa, se cumple con el 81% aun asi se siguen presnetando errores en calidad del dato, gererando duplicidad de periodos en mora, ademas se realiza la depuracion de las incosnsitencias en las afiliaciones  y desactualizacion de datos de contacto del afilido para la gestion de cobro",null,null,null,null,null,null,null,null,null,null,null]
         },
         {
             "id": 13,
@@ -285,7 +285,7 @@
             "meta2021": "70",
             "numerador": [656704020, 483049924, 0, 0, 0, 0],
             "denominador": [656704020,656704020, 0, 0, 0, 0],
-            "analisis": ["EN EL PERIODO NO SE RECIBE PAGO ALGUNO POR PARTE DE ADRES ","EN EL MES DE MARZO DE 2021 ADRES REALIZA UN PAGO DE 173.654.096 POR CONCEPTO DE RECOBRO DE MEDICAMENTOS NO POS ",null,null]
+            "analisis": ["EN EL PERIODO NO SE RECIBE PAGO ALGUNO POR PARTE DE ADRES ","EN EL MES DE MARZO DE 2021 ADRES REALIZA UN PAGO DE 173.654.096 POR CONCEPTO DE RECOBRO DE MEDICAMENTOS NO POS ",null,null,null,null,null]
         },
         {
             "id": 14,
@@ -307,7 +307,7 @@
             "meta2021": "70",
             "numerador": [1030953898.94, 1030953898.94, 0, 0, 0, 0],
             "denominador": [1042452074.939,1030953898.94, 0, 0, 0, 0],
-            "analisis": ["EN EL MES DE FEBRERO EL INSTITUTO DEPARTAMENTAL DE SALUD DE NARIÑO REALIZO UN PAGO DE 11.498.176 POR CONCEPTO DE RECOBROS","EN EL PERIODO NO SE HAN PRESENTADO PAGOS POR PARTE DE LOS ENTES TERRITORIALES PESE A LA GESTION POR PARTE DEL PROCESO ",null,null]
+            "analisis": ["EN EL MES DE FEBRERO EL INSTITUTO DEPARTAMENTAL DE SALUD DE NARIÑO REALIZO UN PAGO DE 11.498.176 POR CONCEPTO DE RECOBROS","EN EL PERIODO NO SE HAN PRESENTADO PAGOS POR PARTE DE LOS ENTES TERRITORIALES PESE A LA GESTION POR PARTE DEL PROCESO ",null,null,null,null,null]
         },
         {
             "id": 15,
@@ -329,7 +329,7 @@
             "meta2021": "100",
             "numerador": [859290170, 217609042, 0, 0, 0, 0],
             "denominador": [339641952,291050867, 0, 0, 0, 0],
-            "analisis": ["Se incluyen legalizacion de anticipos generados en vigencias anteriores","Los anticipos generados para el segundo bimestre han disminuido, se continua legalizando anticipos de la vigencia actual y de vigencias anteriores",null,null]
+            "analisis": ["Se incluyen legalizacion de anticipos generados en vigencias anteriores","Los anticipos generados para el segundo bimestre han disminuido, se continua legalizando anticipos de la vigencia actual y de vigencias anteriores",null,null,null,null,null]
         },
                 
         {
@@ -352,7 +352,7 @@
             "meta2021": "100",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": ["Se presenta esfuerzo propio según la LMA,  Mallamas EPS-I realizo el envio de la autorizacion, pero este no ha sido girado por el ente territorial.","Se presenta esfuerzo propio según la LMA,  Mallamas EPS-I realizo el envio de la autorizacion, pero este no ha sido girado por el ente territorial.",null,null]
+            "analisis": ["Se presenta esfuerzo propio según la LMA,  Mallamas EPS-I realizo el envio de la autorizacion, pero este no ha sido girado por el ente territorial.","Se presenta esfuerzo propio según la LMA,  Mallamas EPS-I realizo el envio de la autorizacion, pero este no ha sido girado por el ente territorial.",null,null,null,null,null]
         },
         {
             "id": 17,
@@ -374,7 +374,7 @@
             "meta2021": "100",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": ["No se ha reportado descuentos por indicadores estipulados en los contratos",null,null,null]
+            "analisis": ["No se ha reportado descuentos por indicadores estipulados en los contratos",null,null,null,null,null]
         },        
         {
             "id": 18,
@@ -394,8 +394,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "Implementado y Funcionando proceso seguimiento y control de costos 30%",
-            "numerador": [0, 0, 0, 0, 0, 0],
-            "denominador": [0,0, 0, 0, 0, 0],
+            "numerador": [0, 0, 0, 0],
+            "denominador": [0,0, 0, 0],
             "analisis": [null,null,null,null]
         },    
         {
@@ -416,8 +416,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "50",
-            "numerador": [0, 0, 0, 0, 0, 0],
-            "denominador": [0,0, 0, 0, 0, 0],
+            "numerador": [0, 0, 0, 0],
+            "denominador": [0,0, 0, 0],
             "analisis": [null,null,null,null]
         },        
         {
@@ -439,8 +439,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "18",
-            "numerador": [0, 0, 0, 0, 0, 0],
-            "denominador": [0,0, 0, 0, 0, 0],
+            "numerador": [0, 0, 0, 0],
+            "denominador": [0,0, 0, 0],
             "analisis": [null,null,null,null]
         },
         {
@@ -464,7 +464,7 @@
             "meta2021": "18",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": [null,null,null,null]
+            "analisis": [null,null,null,null,null,null]
         },
         {
             "id": 22,
@@ -485,8 +485,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "20",
-            "numerador": [0, 0, 0, 0, 0, 0],
-            "denominador": [0,0, 0, 0, 0, 0],
+            "numerador": [0, 0, 0, 0],
+            "denominador": [0,0, 0, 0],
             "analisis": [null,null,null,null]
         },
         {
@@ -510,7 +510,7 @@
             "meta2021": "100",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": [null,null,null,null]
+            "analisis": [null,null,null,null,null,null]
         },
         {
             "id": 24,
@@ -533,7 +533,7 @@
             "meta2021": "100",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": [null,null,null,null]
+            "analisis": [null,null,null,null,null,null]
         },
         {
             "id": 25,
@@ -556,7 +556,7 @@
             "meta2021": "",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": [null,null,null,null]
+            "analisis": [null,null,null,null,null,null]
         },        
         {
             "id": 26,
@@ -579,7 +579,7 @@
             "meta2021": "100",
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": [null,null,null,null]
+            "analisis": [null,null,null,null,null,null]
         },
         {
             "id": 27,
@@ -600,8 +600,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "80",
-            "numerador": [388, 0, 0, 0, 0, 0],
-            "denominador": [445,0, 0, 0, 0, 0],
+            "numerador": [388, 0, 0, 0],
+            "denominador": [445,0, 0, 0],
             "analisis": ["El indicador nos muestra que de 445 personas que han ingresado a la EPS hasta el 30 de marzo 2021, entre antiguos y nuevos, 388 cumplen con el perfil para el cargo, por formación académica o por experiencia y que 57 personas no cumplen con el perfil. Aunque se supera la meta esperada, el objetivo es que todo el que ingres cumpla con el perfil.",null,null,null]
         },
         {
@@ -622,8 +622,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "80",
-            "numerador": [72, 0, 0, 0, 0, 0],
-            "denominador": [89,0, 0, 0, 0, 0],
+            "numerador": [72, 0, 0, 0],
+            "denominador": [89,0, 0, 0],
             "analisis": ["Desde enero a marzo de 2021, se han contratado 89 personas nuevas, de ellas 72 cumplen con el perfil para el cargo, que corresponde al 81% y 17 personas que son el 19%  no cumplen. Se debe tener en cuenta que se está cumpliendo con la meta esperada, aunque el objetivo es que, cada persona que se vincule aporte al desarrollo del proceso.",null,null,null]
         },
         {
@@ -644,9 +644,9 @@
             "unidadMedida": "%",
             "periodicidad": 6,
             "meta2021": "80",
-            "numerador": [0, 0, 0, 0, 0, 0],
-            "denominador": [0,0, 0, 0, 0, 0],
-            "analisis": [null,null,null,null]
+            "numerador": [0, 0],
+            "denominador": [0,0],
+            "analisis": [null,null]
         },
         {
             "id": 30,
@@ -666,8 +666,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "80",
-            "numerador": [322, 0, 0, 0, 0, 0],
-            "denominador": [410,0, 0, 0, 0, 0],
+            "numerador": [322, 0, 0, 0],
+            "denominador": [410,0, 0, 0],
             "analisis": ["El indicador de capacitación nos muestra que de 410 convocados asistieron a la capacitación 322, que corresponde al 79%, es un guarismo aceptable a pesar de las condiciones de confinamiento obligados por la pandemia. Las Coordinaciones que no hicieron las capacitaciones de acuerdo al cronograma, se les enviará la no conformidad a través de la Coordinación de Calidad. NOTA: No se porqué no se generó el gráfico.",null,null,null]
         },
         {
@@ -688,8 +688,8 @@
             "unidadMedida": "%",
             "periodicidad": 3,
             "meta2021": "80",
-            "numerador": [322, 0, 0, 0, 0, 0],
-            "denominador": [80,0, 0, 0, 0, 0],
+            "numerador": [322, 0, 0, 0],
+            "denominador": [80,0, 0, 0],
             "analisis": ["De 322 funcionarios capacitados 80 presentan brecha de cumplimiento, que corresponde a un 25%, esta situación se presenta más que todo con los funcionarios nuevos, debido a que el proceso de adaptación a la vida laboral, para muchos es un proceso de adaptación muy difícil. Se ha recomendado mucho a los Jefes de área para que insistan mucho en la repetición de explicaciones en las actividades que desmpeñas los funcionarios nuevos.",null,null,null]
         },
         {
@@ -1197,7 +1197,7 @@
             "meta2021": "80",
             "numerador": [50, 57, 88, 89, 41, 0, 0, 0, 0, 0, 0, 0],
             "denominador": [60, 74, 101, 99, 58, 0, 0, 0, 0, 0, 0, 0],
-            "analisis": ["10 juntas que se realizaron en más de 5 días. Meta cumplida", "pendientes 4 juntas nutrición:, 1 Mallamas y 1 Tablón de Gomez, 2 IPS Julián Carlosama. Demora en direccionamiento de 4 juntas por daño en el servidor.Demora en la realización de juntas por parte de prescriptores. No cumplida meta", "13 juntas realizadas en un tiempo mayor a 5 dias. Se cumple meta", "5 juntas no se  realizaron en el tiempo establecido, pero  5 se direccionaron tardiamente por suspensión en el internet de la EPS el día 30 de abril a las 10:30 am.Quedan pendiente 8 juntas. 3  ESE Hospital san juan de Dios de Vichada,1 San Antonio de Mitú, 3 de Mamá Dominga, 1 Ese Centro uno. Por motivos que han referido como: personal medico contagido covid, ausencia de servicio de internet no las han podido realizar", "17 juntas no se realizaron en el tiempo establecido, de las cuales  11  fúe por problemas de internet en la EPS del 15 al 21 de Mayo, y no se pudo verificar sistema. 5 quedan pendientes. 1 de Clínica Crear visión, registran en servicio complementario bloqueador, ero solicitan un medicamento, 1 que tiene pendiente corrección de cantidad de ESE Cumbal, 1 FTLC ACIZI , quien maneja administrador de usuario tiene bloqueada la contraseña,no puede activar rol de junta, 1 de Fonocenter SAS, 1 de Mamá Dominga que no pueden visualizar la junta.No se cumple meta.", null, null, null, null, null, null, null] 
+            "analisis": ["10 juntas que se realizaron en más de 5 días. Meta cumplida", "pendientes 4 juntas nutrición:, 1 Mallamas y 1 Tablón de Gomez, 2 IPS Julián Carlosama. Demora en direccionamiento de 4 juntas por daño en el servidor.Demora en la realización de juntas por parte de prescriptores. No cumplida meta", "13 juntas realizadas en un tiempo mayor a 5 dias. Se cumple meta", "5 juntas no se  realizaron en el tiempo establecido, pero  5 se direccionaron tardiamente por suspensión en el internet de la EPS el día 30 de abril a las 10:30 am.Quedan pendiente 8 juntas. 3  ESE Hospital san juan de Dios de Vichada,1 San Antonio de Mitú, 3 de Mamá Dominga, 1 Ese Centro uno. Por motivos que han referido como: personal medico contagido covid, ausencia de servicio de internet no las han podido realizar", "17 juntas no se realizaron en el tiempo establecido, de las cuales  11  fúe por problemas de internet en la EPS del 15 al 21 de Mayo, y no se pudo verificar sistema. 5 quedan pendientes. 1 de Clínica Crear visión, registran en servicio complementario bloqueador, ero solicitan un medicamento, 1 que tiene pendiente corrección de cantidad de ESE Cumbal, 1 FTLC ACIZI , quien maneja administrador de usuario tiene bloqueada la contraseña,no puede activar rol de junta, 1 de Fonocenter SAS, 1 de Mamá Dominga que no pueden visualizar la junta.No se cumple meta.", null, null, null, null, null, null, null, null, null, null, null] 
         }, 
         {
             "id": 55,
@@ -1219,7 +1219,7 @@
             "meta2021": "95",
             "numerador": [503, 600, 824, 713, 420, 0, 0, 0, 0, 0, 0, 0],
             "denominador": [534, 665, 857, 729, 520, 0, 0, 0, 0, 0, 0, 0],
-            "analisis": ["No se direccionan en 24 horas: Espera de aclaraciones de IPS prescriptoras,por error humano,solicitud de ampliación de fecha de suministro,corrección de cantidad, cambios de prestador, por confirmar no suminitros anteriores, falta de proveedor. Meta cumplida", "Causas de no cumplimiento: Cambio de proveedor, cambio a diferido,reporte de no suministro de anterior prescripción, ampliación de fechas por solicitud de proveedores.Además como causa principal : Daño del servidor desde el  9 de febrero a las 4:30 pm hasta el 11 de febrero a las 10:30 pm,lo que no permitió realizar los direccionamientos a tiempo, a pesar que algunas se diligenciaron  directamente por el API del Ministerio el 11 en horas de la tarde.", "33 >  24horas. Sistema presentó problemas   el 19 y 20  lo cual generó retraso en los direccionamientos. Cambio de proveedor por no suministro. Ampliación de fecha de entrega. Aclaraciones a IPS prescriptoras. Verificación de no suministro de prescripciones anteriores. Revisión de lo registrado en justificación. Activación de  2 CUM. No realizan correcciones solicitadas.pero por dx.se direccionan. Meta cumplida.", "Causas de no cumplimiento:Daño del sistema: del 3 al 5. 15  daño plataforma del Ministerio. 17 no hay sistema, no ingresaron prescripciones.30  a las 10:30 am no hay servicio de internet en la EPS, CTC tiene nuevo link:indicado el 2 de mayo a las 9:30pm. Estos daños generó atrasos. Además: No registran talla  de pañal y no la corrigen, se direcciona. Cambio de  cantidad en los direccionamientos por solicitud de farmacia. Activación de CUM. Se encintraban en error MIpres. NV no homologaba para direccionar. No había  ninguna tecnología en la prescricpión, ampliación de fechas de entrega.Cambio de proveedor . corrección de concentración.Meta cumplida", "Meta  no cumplida. 93 no direccionadas a tiempo por problemas en el internet de la EPS del 15 al 21 de mayo. 27 no direccionadas a tiempo por: no aparecía prescripción en la plataforma, no registran ninguna tecnología, cambio de proveedor,solicitan ampliación,se anula no direccionamiento, se cambia cantidad solicitada por farmacia,Valle de LIli no estaba activo para direccionar laboratorios. ", null, null, null, null, null, null, null] 
+            "analisis": ["No se direccionan en 24 horas: Espera de aclaraciones de IPS prescriptoras,por error humano,solicitud de ampliación de fecha de suministro,corrección de cantidad, cambios de prestador, por confirmar no suminitros anteriores, falta de proveedor. Meta cumplida", "Causas de no cumplimiento: Cambio de proveedor, cambio a diferido,reporte de no suministro de anterior prescripción, ampliación de fechas por solicitud de proveedores.Además como causa principal : Daño del servidor desde el  9 de febrero a las 4:30 pm hasta el 11 de febrero a las 10:30 pm,lo que no permitió realizar los direccionamientos a tiempo, a pesar que algunas se diligenciaron  directamente por el API del Ministerio el 11 en horas de la tarde.", "33 >  24horas. Sistema presentó problemas   el 19 y 20  lo cual generó retraso en los direccionamientos. Cambio de proveedor por no suministro. Ampliación de fecha de entrega. Aclaraciones a IPS prescriptoras. Verificación de no suministro de prescripciones anteriores. Revisión de lo registrado en justificación. Activación de  2 CUM. No realizan correcciones solicitadas.pero por dx.se direccionan. Meta cumplida.", "Causas de no cumplimiento:Daño del sistema: del 3 al 5. 15  daño plataforma del Ministerio. 17 no hay sistema, no ingresaron prescripciones.30  a las 10:30 am no hay servicio de internet en la EPS, CTC tiene nuevo link:indicado el 2 de mayo a las 9:30pm. Estos daños generó atrasos. Además: No registran talla  de pañal y no la corrigen, se direcciona. Cambio de  cantidad en los direccionamientos por solicitud de farmacia. Activación de CUM. Se encintraban en error MIpres. NV no homologaba para direccionar. No había  ninguna tecnología en la prescricpión, ampliación de fechas de entrega.Cambio de proveedor . corrección de concentración.Meta cumplida", "Meta  no cumplida. 93 no direccionadas a tiempo por problemas en el internet de la EPS del 15 al 21 de mayo. 27 no direccionadas a tiempo por: no aparecía prescripción en la plataforma, no registran ninguna tecnología, cambio de proveedor,solicitan ampliación,se anula no direccionamiento, se cambia cantidad solicitada por farmacia,Valle de LIli no estaba activo para direccionar laboratorios. ", null, null, null, null, null, null, null, null, null, null, null] 
         },
         {
             "id": 56,
@@ -1241,7 +1241,7 @@
             "meta2021": "90",
             "numerador": [26, 38, 52, 49, 24, 0, 0, 0, 0, 0, 0, 0],
             "denominador": [27, 43, 52, 50, 24, 0, 0, 0, 0, 0, 0, 0],
-            "analisis": ["Un procedimiento con error en cantidad, el cual fue corregido.", "Pendiente 4 procedimientos por  direccionar ( en espera de 2 historias clínicas para revisión y buscar prestador ,1 asignación de cita ya que en Bogotá no hay red para colocación de protesis ocular,pendiente institución que preste el servcio  954311)   y 1 aclaración.", "Se cumple meta.", "Se cumple meta.1 procedimiento no se direccionó a tiempo, debido a que no aparecía en el sistema, se espera hasta que Dirección de sistemas lo verifique y corrija.", "Meta cumplida", null, null, null, null, null, null, null] 
+            "analisis": ["Un procedimiento con error en cantidad, el cual fue corregido.", "Pendiente 4 procedimientos por  direccionar ( en espera de 2 historias clínicas para revisión y buscar prestador ,1 asignación de cita ya que en Bogotá no hay red para colocación de protesis ocular,pendiente institución que preste el servcio  954311)   y 1 aclaración.", "Se cumple meta.", "Se cumple meta.1 procedimiento no se direccionó a tiempo, debido a que no aparecía en el sistema, se espera hasta que Dirección de sistemas lo verifique y corrija.", "Meta cumplida", null, null, null, null, null, null, null, null, null, null, null] 
         },
         {
             "id": 57,
@@ -1263,7 +1263,7 @@
             "meta2021": "15",
             "numerador": [93, 212, 142, 143, 93, 0, 0, 0, 0, 0, 0, 0],
             "denominador": [635, 937, 1058, 938, 648, 0, 0, 0, 0, 0, 0, 0],
-            "analisis": ["52 por causales,30 por errores y falta de registro de talla de pañal, 5 aclaraciones solicitadas a ips Prescritoras, 6 jPendiente 4 untas pendientes.", "80 causales de no direccionamiento. 40 por errores", "Misma solicitud en otra prescripción, todavía tiene suministro, tecnologías incluidas en el plan de salud, exclusión, excede el tiempo de prescripción por ser primera vez,tutela.Errores en digitación. 2 nutriciones pendientes: 1 de Mamá Dominga y otra de Ips Tablón de Gomez y 2 aclaraciones.", "No direccionamientos por junta no aprobada,juntas pendientes,errores, aclaraciones,causales:tutela,cubiertas por el plan básico de salud, tiene suministro de otra prescripción, misma prescripción, excede los 3 meses siendo primera vez.", "No direccionamiento: (55)Tecnología incluída en el plan de beneficios,misma solicitud en otra prescripción, Prescripción excede los 3 meses tratandose de una formulación de primera vez, tiene suministro de otra prescripción,exclusión, suministro por tutela.  (38) : por errores en el diligenciamiento,solicitudes de aclaración, falta de registro de talla,junta no aprobada. No se cumple meta", null, null, null, null, null, null, null] 
+            "analisis": ["52 por causales,30 por errores y falta de registro de talla de pañal, 5 aclaraciones solicitadas a ips Prescritoras, 6 jPendiente 4 untas pendientes.", "80 causales de no direccionamiento. 40 por errores", "Misma solicitud en otra prescripción, todavía tiene suministro, tecnologías incluidas en el plan de salud, exclusión, excede el tiempo de prescripción por ser primera vez,tutela.Errores en digitación. 2 nutriciones pendientes: 1 de Mamá Dominga y otra de Ips Tablón de Gomez y 2 aclaraciones.", "No direccionamientos por junta no aprobada,juntas pendientes,errores, aclaraciones,causales:tutela,cubiertas por el plan básico de salud, tiene suministro de otra prescripción, misma prescripción, excede los 3 meses siendo primera vez.", "No direccionamiento: (55)Tecnología incluída en el plan de beneficios,misma solicitud en otra prescripción, Prescripción excede los 3 meses tratandose de una formulación de primera vez, tiene suministro de otra prescripción,exclusión, suministro por tutela.  (38) : por errores en el diligenciamiento,solicitudes de aclaración, falta de registro de talla,junta no aprobada. No se cumple meta", null, null, null, null, null, null, null, null, null, null, null] 
         },           
         {
             "id": 58,
@@ -1307,7 +1307,7 @@
             "meta2021": "80",
             "numerador": [181, 0, 0, 0],
             "denominador": [210, 0, 0, 0],
-            "analisis":["así mismo para el mes de febrero se alcanza la meta propuesta", null, null]
+            "analisis":["así mismo para el mes de febrero se alcanza la meta propuesta", null, null, null]
         },
         {
             "id": 60,
@@ -1351,7 +1351,7 @@
             "meta2021": "50",
             "numerador": [1, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             "denominador": [2, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            "analisis":["Se realizo una reunión introductoria del director de Proyección Social a Karen Cuesta sobre las actividades a desarrollar", "1. Se realizo una reunión sobre el modelo de Medicina Tradicional con el area de salud Publica en cabeza de  la jefe Johanna. 2. Se realizo una reunión con los coordinadores del Valle, Meta, Cumaribo, sobre tema de estrategias de concertación y comunicación con las auotoridades sobre Covid, 3. Se realizo una  reunión con coordinadora regional de Putumayo sobre estrategias de comunicación y concertación sobre vacunación a las autoridades", "1. Se realizo reunión con miembros de Pueblo Siona y Zion Bain sobre evaluación y revisión de los acuerdos del 2016. 2. Se realizo reunión con funcionarios de la IPS Indigena  Mavesalud sobre acciones Indviduales de Medicina Tradicional 3. Se realizo reunión con Proyección social y Gestión etnocultural sobre aclaraciones de informes", null, null, null, null, null, null, null, null, null]
+            "analisis":["Se realizo una reunión introductoria del director de Proyección Social a Karen Cuesta sobre las actividades a desarrollar", "1. Se realizo una reunión sobre el modelo de Medicina Tradicional con el area de salud Publica en cabeza de  la jefe Johanna. 2. Se realizo una reunión con los coordinadores del Valle, Meta, Cumaribo, sobre tema de estrategias de concertación y comunicación con las auotoridades sobre Covid, 3. Se realizo una  reunión con coordinadora regional de Putumayo sobre estrategias de comunicación y concertación sobre vacunación a las autoridades", "1. Se realizo reunión con miembros de Pueblo Siona y Zion Bain sobre evaluación y revisión de los acuerdos del 2016. 2. Se realizo reunión con funcionarios de la IPS Indigena  Mavesalud sobre acciones Indviduales de Medicina Tradicional 3. Se realizo reunión con Proyección social y Gestión etnocultural sobre aclaraciones de informes", null, null, null, null, null, null, null, null, null, null, null]
         },
         {
             "id": 62,
