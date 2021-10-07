@@ -4,7 +4,16 @@ import Chart from "react-google-charts";
 const Indicador = props => {
 
     const { indActivo } = props
-    const { numerador, denominador, analisis, nombreIndicador, fuenteDeCoordinacion, lineaBase, meta2021 } = indActivo
+    const { 
+      numerador, 
+      denominador, 
+      analisis, 
+      nombreIndicador, 
+      fuenteDeCoordinacion, 
+      lineaBase, 
+      meta2021, 
+      unidadMedida,
+    } = indActivo
 
     const [numeradorState, setNumerador] = useState([])
     const [denominadorState, setDenominador] = useState([])
@@ -59,7 +68,7 @@ const Indicador = props => {
         resultadoTotalTmp = resultadoParcialTmp.reduce((prev, curr) => (Number(prev) + Number(curr)), 0)
       }
       
-      setResultadoTotal(resultadoTotalTmp / Number(resultadoParcialTmp.length))
+      setResultadoTotal((resultadoTotalTmp / Number(resultadoParcialTmp.length)).toFixed(1))
       setDataChart(dataChartTmp)
       setResultadoParcial(resultadoParcialTmp)
     }
@@ -107,12 +116,12 @@ const Indicador = props => {
                                 <div className="p-3 border bg-light"><b>Línea base:</b> {lineaBase}</div>
                                 </div>
                                 <div className="col">
-                                <div className="p-3 border bg-light"><b>Meta 2021:</b> {meta2021}%</div>
+                                <div className="p-3 border bg-light"><b>Meta 2021:</b> {meta2021}{unidadMedida}</div>
                                 </div>
                                 <div className="col ">
                                 <div className={`p-3 border  ${
                                   resultadoTotal >= 90 ? `bg-success text-light` : resultadoTotal >= 50 ? `bg-warning` : `bg-danger text-light` 
-                                }`}><b>Resultado Total:</b> {resultadoTotal}%</div>
+                                }`}><b>Resultado Total:</b> {`${resultadoTotal} ${unidadMedida}`}</div>
                                 </div>
                             </div>
                         </div>
