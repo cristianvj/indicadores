@@ -35,8 +35,8 @@ const Home = () => {
                     <div className="card mb-3 mt-5 card-home col-md-8 col-lg-6 mx-auto">
                         <img src={logoMallamas} className="mx-auto logo-home" alt="logo_mallamas"/>
                         <div className="card-body text-center mt-3 mb-3">
-                            <h5 className="card-title">Seleccione su co ordinación</h5>
-                            <p className="card-text w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempore quasi porro! Minima esse, veniam dolore architecto debitis nulla doloremque alias voluptas cupiditate quod nisi eveniet. Soluta corrupti dolorem perspiciatis.</p>
+                            <h5 className="card-title">Seleccione su coordinación</h5>
+                            <p className="card-text w-75 mx-auto">Esta es una herramienta que permite un seguimiento gráfico de los indicadores, lo cual ayuda a la toma de decisiones y acercarse a temas puntuales.</p>
                             <form action="" className="mt-4">
                                 {
                                     !isLoading ? (
