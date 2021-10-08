@@ -219,14 +219,15 @@ const Indicador = props => {
                                     data={dataChart}
                                     options={{
                                       title: `Graficos del indicador ${indActivo.numeroIndicador}`,
-                                      chartArea: { width: '65%' },
+                                      chartArea: { width: '80%' },
+                                      legend: {position: 'bottom'},
                                       hAxis: {
                                           title: 'Periodo',
                                           minValue: 0,
                                       },
                                       vAxis: {
                                           title: 'Porcentaje',
-                                      },
+                                      }
                                     }}
                                     legendToggle
                                 />
