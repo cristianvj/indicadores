@@ -21,7 +21,7 @@
             "numerador": [10, 30],
             "denominador": [12, 30],
             "analisis": ["Como se habia manifestado en la reunion sostenida con  planeacion, este indicador es compartido y liderado por la direccion de calidad quien debe convocar a una reunion para analizar y organizar el tema; hasta la fecha no se ha recibido ninguna invitacion. ",null],
-            "resultado": 22
+            "resultado": 56
         },
         {
             "id": 2,
@@ -44,7 +44,7 @@
             "numerador": [1518, 0, 0, 0, 0, 0],
             "denominador": [172,0, 0, 0, 0, 0],
             "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 8 dias en promedio de estancia UCI adultos. ",null,null,null, null,null],
-            "resultado": 22
+            "resultado": 38
         },  
         {
             "id": 3,
@@ -67,7 +67,7 @@
             "numerador": [322, 0, 0, 0, 0, 0],
             "denominador": [41,0, 0, 0, 0, 0],
             "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 7 dias en promedio de estancia UCI neonatos, alcanzando la meta propuesta",null,null,null,null,null],
-            "resultado": 22
+            "resultado": 87
         },
         {
             "id": 4,
@@ -90,7 +90,7 @@
             "numerador": [0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 0, 0, 0, 0],
             "analisis": ["No se priorizo este servicio por motivo de pandemia, ya que en este entonces nos encontrabamos en el segundo pico y se priorizo servicio de UCI para realizar desescalomanientos ",null,null,null,null,null],
-            "resultado": 22
+            "resultado": 76
         },
         {
             "id": 5,
@@ -136,7 +136,7 @@
             "numerador": [187, 0, 0, 0, 0, 0],
             "denominador": [198,0, 0, 0, 0, 0],
             "analisis": ["Se cumplio con la meta propuesta en tramites gestionados",null,null,null,null,null],
-            "resultado": 22
+            "resultado": 98
         },
         {
             "id": 7,
@@ -159,7 +159,7 @@
             "numerador": [1937, 0, 0, 0, 0, 0],
             "denominador": [2508,0, 0, 0, 0, 0],
             "analisis": ["Para este indicador no se alcanza la meta, pero es minimo el valor que faltaria para cumplir con el objetivo",null,null,null,null,null],
-            "resultado": 22
+            "resultado": 70
         },
         {
             "id": 8,
@@ -182,7 +182,7 @@
             "numerador": [363, 0, 0, 0, 0, 0],
             "denominador": [766,0, 0, 0, 0, 0],
             "analisis": ["Para este indicador aun no se cumple el tiempo limite establecido, ya que se deberia estar reportando en el mes de junio; mas sin embargo se reporta lo que se lleva adelantado hasta la fecha con un porcentaje del 47% dato positivo teniendo en cuenta aun hace falta aproximadamente 2 meses de plazo limite del indicador",null,null,null,null,null],
-            "resultado": 22
+            "resultado": 80
         },
         {
             "id": 9,
@@ -205,7 +205,7 @@
             "numerador": [425394004, 0, 0, 0],
             "denominador": [834638477,0, 0, 0],
             "analisis": ["Para este indicador no se alacanza la meta, se presume a razon de personal nuevo en el proceso el cual no cuenta con los conocimientos suficientes para argumentar una glosa, se espera mejorar el indicador con el porceso de  capacitanciones ",null,null,null],
-            "resultado": 22
+            "resultado": 55
         },    
         {
             "id": 10,
@@ -228,7 +228,7 @@
             "numerador": [0, 0, 690307126, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             "denominador": [0,0, 6195529681, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             "analisis": [null,null,"Para el año 2021 se debe de legalizar el 100% de los anticipos hasta la vigencia 2018 por requerimiento de la contraloria en el primer trimestre se ha cumplido con el 11% ya que no se contaba con el personal necesario para realizar el proceso de revision ademas se esta realizando el proceso de depuracion con los diferentes prestadores a traves del envio de derechos de peticion para cumplir con la legalizacon deestos anticipos",null,null,null,null,null,null,null,null,null],
-            "resultado": 22
+            "resultado": 99
         },
                     
         {
@@ -252,7 +252,7 @@
             "numerador": [18, 0, 0, 0],
             "denominador": [72,0, 0, 0],
             "analisis": ["Para el primer trimestre del año 2021 no se cumpli con el 60% de la depuracion de cartera debido a incovenientes administrativos internos dentro del area de cartera (asigancion de claves, falta de personal, personal nuevo, jornadas de capacitacion) ",null,null,null],
-            "resultado": 22
+            "resultado": 35
         },
         {
             "id": 12,
