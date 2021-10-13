@@ -6,12 +6,11 @@ const Reportes = () => {
 
 	const dispatch = useDispatch()
 
-	const [selIndicador, setSelIndicador] = useState ()
 	const [indicadores, setIndicadores] = useState([])
 
 	useEffect(() => {
 		const getIndicadores = () => dispatch(fetchIndicadores())
-		return getIndicadores()
+		getIndicadores()
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -25,21 +24,13 @@ const Reportes = () => {
 
 	const handleSelectTipoindicadores = e => {
 		const indicadoresSeleccionados = indicadoresStore.filter(indicador => {
-			if(e === 'Aceptables'){ 
-				return indicador.resultado >= 80
-			}
-			if(e === 'Regulares') {
-				return indicador.resultado >= 50 && indicador.resultado < 80
-			}			
-			if(e === 'Bajos') {
-				return indicador.resultado < 50
-			}
-			return indicador	
-
+			if(e === 'Aceptables')	return indicador.resultado >= 80
+			if(e === 'Regulares')	return indicador.resultado >= 50 && indicador.resultado < 80	
+			if(e === 'Bajos') return indicador.resultado < 50
+			return indicador
 		})
 		setIndicadores(indicadoresSeleccionados)
 	}
-
 
 	return (
 		<div className="container pt-5">
