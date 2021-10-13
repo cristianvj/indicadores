@@ -24,17 +24,14 @@ const Reportes = () => {
 
 
 	const handleSelectTipoindicadores = e => {
-		const indicadoresSeleccionados = indicadores.filter(indicador => {
+		const indicadoresSeleccionados = indicadoresStore.filter(indicador => {
 			if(e === 'Aceptables'){ 
-				setIndicadores(indicadoresStore)
 				return indicador.resultado >= 80
 			}
 			if(e === 'Regulares') {
-				setIndicadores(indicadoresStore)
 				return indicador.resultado >= 50 && indicador.resultado < 80
 			}			
 			if(e === 'Bajos') {
-				setIndicadores(indicadoresStore)
 				return indicador.resultado < 50
 			}
 			return indicador	
@@ -62,7 +59,6 @@ const Reportes = () => {
 					<option value="Aceptables">Indicadores Aceptables</option>
 					<option value="Regulares">Indicadores Regulares</option>
 					<option value="Bajos">Indicadores Bajos</option>
-					<option value="Todos">Todos los Indicadores</option>
 				</select>
 				</div>
 			</div>
