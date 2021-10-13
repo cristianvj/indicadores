@@ -7,6 +7,7 @@ const Reportes = () => {
 	const dispatch = useDispatch()
 
 	const [selIndicador, setSelIndicador] = useState ()
+	const [indicadores, setIndicadores] = useState([])
 
 	useEffect(() => {
 		const getIndicadores = () => dispatch(fetchIndicadores())
@@ -14,11 +15,34 @@ const Reportes = () => {
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	const indicadores = useSelector(state => state.indicadores.indicadores)
+	const indicadoresStore = useSelector(state => state.indicadores.indicadores)
 	const isLoading = useSelector(state => state.indicadores.loading)
 
+	useEffect(() => {
+		setIndicadores(indicadoresStore)
+	}, [indicadoresStore])
 
-	console.log(indicadores)
+
+	const handleSelectTipoindicadores = e => {
+		const indicadoresSeleccionados = indicadores.filter(indicador => {
+			if(e === 'Aceptables'){ 
+				setIndicadores(indicadoresStore)
+				return indicador.resultado >= 80
+			}
+			if(e === 'Regulares') {
+				setIndicadores(indicadoresStore)
+				return indicador.resultado >= 50 && indicador.resultado < 80
+			}			
+			if(e === 'Bajos') {
+				setIndicadores(indicadoresStore)
+				return indicador.resultado < 50
+			}
+			return indicador	
+
+		})
+		setIndicadores(indicadoresSeleccionados)
+	}
+
 
 	return (
 		<div className="container pt-5">
@@ -29,11 +53,16 @@ const Reportes = () => {
 			</div>
 			<div className="row justify-content-md-center pt-2">
 				<div className="col col-lg-4">
-				<select className="form-select" aria-label="Default select example">
+				<select 
+					className="form-select" 
+					aria-label="Default select example"
+					onChange={e=>handleSelectTipoindicadores(e.target.value)}
+				>
 					<option defaultValue>-- seleccione una opción --</option>
-					<option defaultValue="1">Indicadores Aceptables</option>
-					<option defaultValue="2">Indicadores Regulares</option>
-					<option defaultValue="3">Indicadores Bajos</option>
+					<option value="Aceptables">Indicadores Aceptables</option>
+					<option value="Regulares">Indicadores Regulares</option>
+					<option value="Bajos">Indicadores Bajos</option>
+					<option value="Todos">Todos los Indicadores</option>
 				</select>
 				</div>
 			</div>
@@ -65,17 +94,17 @@ const Reportes = () => {
 									</tr>
 								</thead>
 								{
-									indicadores.map((i, id)=>(
+									indicadores.map((indicador, id)=>(
 										<tbody key={id}>
-											<tr className={i.resultado < 50 ? 'table-danger': i.resultado < 80 ? 'table-warning' : 'table-success'}>
-												<td>{i.eje}</td>
-												<td>{i.areaClave}</td>
-												<td>{i.perspectiva}</td>
-												<td>{i.estrategia}</td>
-												<td>{i.objetivo}</td>
-												<td>{i.formulaIndicador}</td>
-												<td>{i.meta2021} {i.unidadMedida}</td>
-												<td>{i.resultado} {i.unidadMedida}</td>
+											<tr className={indicador.resultado < 50 ? 'table-danger': indicador.resultado < 80 ? 'table-warning' : 'table-success'}>
+												<td>{indicador.eje}</td>
+												<td>{indicador.areaClave}</td>
+												<td>{indicador.perspectiva}</td>
+												<td>{indicador.estrategia}</td>
+												<td>{indicador.objetivo}</td>
+												<td>{indicador.formulaIndicador}</td>
+												<td>{indicador.meta2021} {indicador.unidadMedida}</td>
+												<td>{indicador.resultado} {indicador.unidadMedida}</td>
 											</tr>
 										</tbody>
 									))
