@@ -59,9 +59,15 @@ const Indicador = props => {
       let resultadoTotalTmp = 0
 
       numeradorChart.forEach((n, id) => {
-        dataChartTmp.push([`Periodo ${id+1}`, Number(meta2021), Number(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))])
+          console.log(unidadMedida)
+        if(unidadMedida === "%") {
+            dataChartTmp.push([`Periodo ${id+1}`, Number(meta2021), Number(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))])
+            resultadoParcialTmp.push(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))
+        }else{
+            dataChartTmp.push([`Periodo ${id+1}`, Number(meta2021), Number((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id]))).toFixed(1))])
+            resultadoParcialTmp.push((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id]))).toFixed(1))
+        }
         
-        resultadoParcialTmp.push(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))
       })
 
       if(resultadoParcialTmp.length > 0){
@@ -150,7 +156,7 @@ const Indicador = props => {
                                                                     type="number" 
                                                                     value={`${Number(n)}`} className="form-control m-1" 
                                                                     onChange={e=>handleNumerador(e.target.value, id)}
-                                                                />%
+                                                                />{unidadMedida}
                                                             </div>
                                                         </td>
                                                     ))
@@ -166,7 +172,7 @@ const Indicador = props => {
                                                                   type="number" 
                                                                   value={`${Number(n)}`} className="form-control m-1" 
                                                                   onChange={e=>handleDenominador(e.target.value, id)}
-                                                              />%
+                                                              />{unidadMedida}
                                                           </div>
                                                       </td>
                                                   ))
@@ -179,7 +185,7 @@ const Indicador = props => {
                                               return (
                                                 <td key={id}>
                                                   <div>
-                                                    <p> {r} %</p>
+                                                    <p> {r} {unidadMedida}</p>
                                                   </div>
                                                 </td>
                                               )})
