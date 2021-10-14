@@ -41,10 +41,10 @@
             "unidadMedida": "días",
             "periodicidad": 2,
             "meta2021": "10",
-            "numerador": [1518, 0, 0, 0, 0, 0],
-            "denominador": [172,0, 0, 0, 0, 0],
+            "numerador": [1518, 837, 999, 0, 0, 0],
+            "denominador": [172, 86, 98, 0, 0, 0],
             "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 8 dias en promedio de estancia UCI adultos. ",null,null,null, null,null],
-            "resultado": 38
+            "resultado": 10
         },  
         {
             "id": 3,
@@ -64,10 +64,10 @@
             "unidadMedida": "Días",
             "periodicidad": 2,
             "meta2021": "10 días",
-            "numerador": [322, 0, 0, 0, 0, 0],
-            "denominador": [41,0, 0, 0, 0, 0],
+            "numerador": [322, 216, 235, 0, 0, 0],
+            "denominador": [41,26, 29, 0, 0, 0],
             "analisis": ["Se realizo auditoria de concurrencia en unidad de cuidados intensivos de IPS priorizadas, en donde el indicador obtenido fue de 7 dias en promedio de estancia UCI neonatos, alcanzando la meta propuesta",null,null,null,null,null],
-            "resultado": 87
+            "resultado": 8
         },
         {
             "id": 4,
@@ -87,10 +87,10 @@
             "unidadMedida": "Días",
             "periodicidad": 2,
             "meta2021": "4 días",
-            "numerador": [0, 0, 0, 0, 0, 0],
-            "denominador": [0,0, 0, 0, 0, 0],
+            "numerador": [0, 71, 95, 0, 0, 0],
+            "denominador": [0, 17, 14, 0, 0, 0],
             "analisis": ["No se priorizo este servicio por motivo de pandemia, ya que en este entonces nos encontrabamos en el segundo pico y se priorizo servicio de UCI para realizar desescalomanientos ",null,null,null,null,null],
-            "resultado": 76
+            "resultado": 5
         },
         {
             "id": 5,
