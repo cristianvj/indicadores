@@ -24,9 +24,9 @@ const Reportes = () => {
 
 	const handleSelectTipoindicadores = e => {
 		const indicadoresSeleccionados = indicadoresStore.filter(indicador => {
-			if(e === 'Aceptables')	return indicador.resultado >= 80
-			if(e === 'Regulares')	return indicador.resultado >= 50 && indicador.resultado < 80	
-			if(e === 'Bajos') return indicador.resultado < 50
+			if(e === 'Aceptables')	return indicador.resultado >= indicador.meta2021
+			if(e === 'Regulares')	return indicador.resultado == indicador.meta2021	
+			if(e === 'Bajos') return indicador.resultado < indicador.meta2021
 			return indicador
 		})
 		setIndicadores(indicadoresSeleccionados)
@@ -89,7 +89,7 @@ const Reportes = () => {
 												<td>{indicador.perspectiva}</td>
 												<td>{indicador.estrategia}</td>
 												<td>{indicador.objetivo}</td>
-												<td>{indicador.formulaIndicador}</td>
+												<td>{indicador.nombreIndicador}</td>
 												<td>{indicador.meta2021} {indicador.unidadMedida}</td>
 												<td>{indicador.resultado} {indicador.unidadMedida}</td>
 											</tr>
