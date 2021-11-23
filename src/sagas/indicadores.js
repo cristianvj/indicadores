@@ -1,13 +1,16 @@
 import { put, call, takeLatest } from "redux-saga/effects"
+import apiCall from '../config/fetchClient'
+import Swal from 'sweetalert2'
 import { 
 	START_FETCH_INDICADORES,
 	FETCH_INDICADOPRES_SUCCESS,
-	FETCH_INDICADORES_ERROR 
+	FETCH_INDICADORES_ERROR,
+	OBTENER_INDICADOR_EDITAR,
+	INDICADOR_EDITADO_EXITO,
+	INDICADOR_EDITADO_ERROR
 } from "../types"
-import apiCall from '../config/fetchClient'
-import Swal from 'sweetalert2'
 
-function* getIndicadores(){
+function* getIndicadores() {
 	try {
 		const result = yield call(apiCall, 'GET', '/bdIndicadores')
 		yield put({ type: FETCH_INDICADOPRES_SUCCESS, payload: result})
@@ -21,7 +24,13 @@ function* getIndicadores(){
 	}
 }
 
+function* updateIndicador(data) {
+	yield console.log('updateIndicador');
+	yield console.log(data)
+}
+
 //Watchers
 export default function* indicadores() {
 	yield takeLatest(START_FETCH_INDICADORES, getIndicadores);
+	yield takeLatest(OBTENER_INDICADOR_EDITAR, updateIndicador)
 }

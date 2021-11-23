@@ -1,10 +1,15 @@
 import React, {useState, useEffect} from 'react'
+import { useDispatch } from 'react-redux'
+import { updateIndicadores } from '../actions/indicadoresActions'
 import Chart from "react-google-charts";
 
-const Indicador = props => {
 
+const Indicador = props => {
+    
+    const dispatch = useDispatch();
     const { indActivo } = props
     const { 
+      id,
       numerador, 
       denominador, 
       analisis, 
@@ -59,10 +64,9 @@ const Indicador = props => {
       let resultadoTotalTmp = 0
 
       numeradorChart.forEach((n, id) => {
-          console.log(unidadMedida)
         if(unidadMedida === "%") {
             dataChartTmp.push([`Periodo ${id+1}`, Number(meta2021), Number(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))])
-            resultadoParcialTmp.push(((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id])))*100).toFixed(1))
+            resultadoParcialTmp.push(+((+n / (+denominadorState[id] === 0 ? 1 : +denominadorState[id]))*100).toFixed(1))
         }else{
             dataChartTmp.push([`Periodo ${id+1}`, Number(meta2021), Number((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id]))).toFixed(1))])
             resultadoParcialTmp.push((Number(n) / (Number(denominadorState[id]) === 0 ? 1 : Number(denominadorState[id]))).toFixed(1))
@@ -74,28 +78,35 @@ const Indicador = props => {
         resultadoTotalTmp = resultadoParcialTmp.reduce((prev, curr) => (Number(prev) + Number(curr)), 0)
       }
       
-      setResultadoTotal((resultadoTotalTmp / Number(resultadoParcialTmp.length)).toFixed(1))
+      setResultadoTotal(+(resultadoTotalTmp / Number(resultadoParcialTmp.length)).toFixed(1))
       setDataChart(dataChartTmp)
       setResultadoParcial(resultadoParcialTmp)
     }
 
     const handleForm = e => {
         e.preventDefault()
-        //console.log(numerador)
+        dispatch(updateIndicadores({
+            id,
+            numeradorState,
+            denominadorState,
+            analisisState,
+            resultadoParcial,
+            resultadoTotal
+        }))
     }
 
     const handleNumerador = (n, id) => {
         const nuevoNumerador = numeradorState.map((item, itemId) => {
-            if(itemId === id) return n
-            return item
+            if(itemId === id) return +n
+            return +item
         })
         setNumerador(nuevoNumerador)
     }
 
     const handleDenominador = (n, id) => {
         const nuevoDenominador = denominadorState.map((item, itemId) => {
-            if(itemId === id) return n
-            return item
+            if(itemId === id) return +n
+            return +item
         })
         setDenominador(nuevoDenominador)
     }
@@ -140,9 +151,8 @@ const Indicador = props => {
                                             <tr>
                                                 <th scope="row">Periodo</th>
                                                 {
-                                                    perioricidadArr.map(p => (
-
-                                                        <td key={p}><b>{p}</b></td>
+                                                    perioricidadArr.map(periodo => (
+                                                        <td key={periodo}><b>{periodo}</b></td>
                                                     ))
                                                 }
                                             </tr>
