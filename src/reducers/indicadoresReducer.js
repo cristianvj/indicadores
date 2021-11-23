@@ -2,8 +2,8 @@ import {
     START_FETCH_INDICADORES,
     FETCH_INDICADOPRES_SUCCESS,
     FETCH_INDICADORES_ERROR,
-	OBTENER_INDICADOR_EDITAR,
-	INDICADOR_EDITADO_EXITO,
+	START_INDICADOR_EDITAR,
+	INDICADOR_EDITADO_SUCCESS,
 	INDICADOR_EDITADO_ERROR
 } from '../types'
 
@@ -17,6 +17,7 @@ const initialState = {
 export default function(state = initialState, {type, payload}) {
     console.log(`payload ${type}`)
     switch (type) {
+        case START_INDICADOR_EDITAR:
         case START_FETCH_INDICADORES:
             return {
                 ...state,
@@ -31,22 +32,24 @@ export default function(state = initialState, {type, payload}) {
                 loading: false,
             }
         case FETCH_INDICADORES_ERROR:
+        case INDICADOR_EDITADO_ERROR:
             return {
                 ...state,
                 error: payload,
                 loading: false,
             }
-        case OBTENER_INDICADOR_EDITAR:
+        case INDICADOR_EDITADO_SUCCESS:
             return {
                 ...state,
+                loading: false,
                 indicadores: state.indicadores.map(indicador => {
                    return indicador.id === payload.id ? 
                    {
                        ...indicador,
-                       numerador: payload.numeradorState,
-                       denominador: payload.denominadorState,
-                       analisis: payload.analisisState,
-                       resultado: payload.resultadoTotal
+                       numerador: payload.numerador,
+                       denominador: payload.denominador,
+                       analisis: payload.analisis,
+                       resultado: payload.resultado
                    }: indicador
                 })
             }

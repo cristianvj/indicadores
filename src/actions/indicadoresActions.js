@@ -2,8 +2,8 @@ import {
     START_FETCH_INDICADORES,
     FETCH_INDICADOPRES_SUCCESS,
     FETCH_INDICADORES_ERROR,
-	OBTENER_INDICADOR_EDITAR,
-	INDICADOR_EDITADO_EXITO,
+	START_INDICADOR_EDITAR,
+	INDICADOR_EDITADO_SUCCESS,
 	INDICADOR_EDITADO_ERROR
 } from '../types'
 
@@ -23,13 +23,13 @@ export const fetchIndicadoresError = error => ({
     payload: error
 })
 
-export const updateIndicadores = data => ({
-    type: OBTENER_INDICADOR_EDITAR,
-    payload: data
+export const updateIndicadores = nuevoIndicador => ({
+    type: START_INDICADOR_EDITAR,
+    payload: nuevoIndicador
 })
 
 export const updateIndicadoresSuccess = data => ({
-    type: INDICADOR_EDITADO_EXITO,
+    type: INDICADOR_EDITADO_SUCCESS,
     payload: data
 })
 

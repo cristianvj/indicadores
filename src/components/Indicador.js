@@ -7,9 +7,8 @@ import Chart from "react-google-charts";
 const Indicador = props => {
     
     const dispatch = useDispatch();
-    const { indActivo } = props
-    const { 
-      id,
+    const { indActivo } = props;
+    const {
       numerador, 
       denominador, 
       analisis, 
@@ -18,7 +17,7 @@ const Indicador = props => {
       lineaBase, 
       meta2021, 
       unidadMedida,
-    } = indActivo
+    } = indActivo;
 
     const [numeradorState, setNumerador] = useState([])
     const [denominadorState, setDenominador] = useState([])
@@ -86,12 +85,12 @@ const Indicador = props => {
     const handleForm = e => {
         e.preventDefault()
         dispatch(updateIndicadores({
-            id,
-            numeradorState,
-            denominadorState,
-            analisisState,
-            resultadoParcial,
-            resultadoTotal
+            ...indActivo,
+            numerador: numeradorState,
+            denominador: denominadorState,
+            analisis: analisisState,
+            resultadoParcial: resultadoParcial,
+            resultado: resultadoTotal
         }))
     }
 

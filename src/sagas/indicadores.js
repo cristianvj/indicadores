@@ -5,14 +5,14 @@ import {
 	START_FETCH_INDICADORES,
 	FETCH_INDICADOPRES_SUCCESS,
 	FETCH_INDICADORES_ERROR,
-	OBTENER_INDICADOR_EDITAR,
-	INDICADOR_EDITADO_EXITO,
+	START_INDICADOR_EDITAR,
+	INDICADOR_EDITADO_SUCCESS,
 	INDICADOR_EDITADO_ERROR
 } from "../types"
 
 function* getIndicadores() {
 	try {
-		const result = yield call(apiCall, 'GET', '/bdIndicadores')
+		const result = yield call(apiCall, 'GET')
 		yield put({ type: FETCH_INDICADOPRES_SUCCESS, payload: result})
 	} catch (err) {
 		yield put({ type: FETCH_INDICADORES_ERROR, payload: true})
@@ -24,13 +24,30 @@ function* getIndicadores() {
 	}
 }
 
-function* updateIndicador(data) {
-	yield console.log('updateIndicador');
-	yield console.log(data)
+function* updateIndicador(nuevoIndicador) {
+	const { payload } = nuevoIndicador;
+	try {
+		const result = yield call(apiCall, 'PUT', `/${payload.id}`, payload)
+		if(result) {
+			yield put({ type: INDICADOR_EDITADO_SUCCESS, payload: payload})
+			yield Swal.fire(
+        'Correcto',
+        'El indicador se guardó correctamente',
+        'success',
+      )
+		}
+	} catch (err) {
+		yield put({ type: INDICADOR_EDITADO_ERROR, payload: true})
+		Swal.fire({
+			icon: 'error',
+			title: 'Hubo un error',
+			text: 'Hubo un error con la conexion a la API, intenta de nuevo'
+		})
+	}
 }
 
 //Watchers
 export default function* indicadores() {
 	yield takeLatest(START_FETCH_INDICADORES, getIndicadores);
-	yield takeLatest(OBTENER_INDICADOR_EDITAR, updateIndicador)
+	yield takeLatest(START_INDICADOR_EDITAR, updateIndicador)
 }
