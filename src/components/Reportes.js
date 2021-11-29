@@ -25,7 +25,7 @@ const Reportes = () => {
 	const handleSelectTipoindicadores = e => {
 		const indicadoresSeleccionados = indicadoresStore.filter(indicador => {
 			if(e === 'Aceptables')	return indicador.resultado >= indicador.meta2021
-			if(e === 'Regulares')	return indicador.resultado == indicador.meta2021	
+			if(e === 'Regulares')	return indicador.resultado === indicador.meta2021	
 			if(e === 'Bajos') return indicador.resultado < indicador.meta2021
 			return indicador
 		})
