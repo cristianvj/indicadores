@@ -83,7 +83,7 @@ const Reportes = () => {
 								{
 									indicadores.map((indicador, id)=>(
 										<tbody key={id}>
-											<tr className={indicador.resultado < 50 ? 'table-danger': indicador.resultado < 80 ? 'table-warning' : 'table-success'}>
+											<tr className={indicador.resultado < indicador.meta2021 ? 'table-danger': indicador.resultado == indicador.meta2021 ? 'table-warning' : 'table-success'}>
 												<td>{indicador.eje}</td>
 												<td>{indicador.areaClave}</td>
 												<td>{indicador.perspectiva}</td>
